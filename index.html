@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>GBase Support チラシ A4（AI電話／AIお店選び）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+@page { size: 210mm 297mm; margin: 0; }
+:root {
+  --brand: #705EE2; --brand-d: #5546C4; --brand-l: #E6E2F8; --brand-ll: #F4F2FC; --brand-t: #C9BFFF;
+  --navy: #0F172A; --ink: #1A2238; --sub: #56617A; --line: #DFE3EE; --yellow: #FFCB2E; --green: #1D8F4E;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { background: #8892A0; font-family: 'Noto Sans JP', sans-serif; color: var(--ink); font-feature-settings: "palt"; }
+.en { font-family: 'Outfit', 'Noto Sans JP', sans-serif; }
+.page { width: 210mm; height: 297mm; background: #fff; position: relative; overflow: hidden; margin: 6mm auto; page-break-after: always; break-after: page; display: flex; flex-direction: column; }
+@media print { body { background: #fff; } .page { margin: 0; } * { box-shadow: none !important; } }
+b, strong { font-weight: 700; }
+nobr { white-space: nowrap; }
+
+.hd { height: 14mm; flex: 0 0 14mm; padding: 0 12mm; display: flex; align-items: center; justify-content: space-between; }
+.hd img { height: 7.2mm; display: block; }
+.hd .tag { font-size: 7.6pt; font-weight: 700; color: var(--brand-d); border: 0.3mm solid var(--brand-t); border-radius: 10mm; padding: 0.9mm 3.4mm; }
+h2 { font-weight: 900; font-size: 13.6pt; color: var(--navy); line-height: 1.35; }
+h2 span { color: var(--brand); }
+.kicker { font-size: 7.6pt; font-weight: 700; color: var(--brand-d); margin-bottom: 1mm; }
+.sec { padding: 0 12mm; }
+
+/* Hero */
+.hero { flex: 0 0 76mm; background: var(--brand-ll); display: flex; align-items: center; gap: 6mm; padding: 0 12mm; position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; width: 70mm; height: 70mm; border: 7mm solid #E1DBF7; border-radius: 50%; right: -24mm; top: -28mm; }
+.hero > * { position: relative; }
+.hl { flex: 0 0 92mm; }
+.pill { display: inline-block; background: var(--yellow); color: var(--navy); font-weight: 700; font-size: 8.2pt; padding: 1.1mm 3.6mm; border-radius: 10mm; }
+h1 { font-weight: 900; font-size: 24pt; line-height: 1.32; color: var(--navy); margin-top: 3.2mm; letter-spacing: -0.01em; }
+h1 span { color: var(--brand); }
+.lead { font-size: 9pt; line-height: 1.75; color: var(--sub); font-weight: 500; margin-top: 3mm; }
+.hr { flex: 1; }
+.hr img { width: 100%; height: 58mm; object-fit: cover; display: block; border-radius: 3mm; box-shadow: 0 1.5mm 4mm rgba(40,30,110,0.14); }
+.hr .cap { font-size: 6pt; color: var(--sub); margin-top: 1.4mm; text-align: right; }
+
+/* 表面：お悩み */
+.pain { padding-top: 6mm; }
+.pr { display: flex; gap: 3.6mm; margin-top: 3mm; }
+.pc { flex: 1; background: #F5F6F9; border-radius: 3mm; padding: 2.6mm 2.6mm 3mm; text-align: center; }
+.pc img { width: 100%; height: 25mm; object-fit: cover; object-position: center 30%; border-radius: 2mm; background: #fff; display: block; }
+.pc .w { font-size: 6.6pt; font-weight: 700; color: var(--sub); margin-top: 2.2mm; }
+.pc .t { font-size: 8.8pt; font-weight: 900; color: var(--navy); line-height: 1.4; margin-top: 0.6mm; }
+.bridge { text-align: center; font-size: 10.4pt; font-weight: 900; color: var(--navy); margin: 4mm 0 3.2mm; }
+.bridge span { color: var(--brand); }
+.bridge i { font-style: normal; color: var(--brand); margin: 0 3mm; }
+
+/* 解決カード */
+.fr { display: flex; gap: 3.6mm; }
+.fc { flex: 1; border: 0.3mm solid var(--brand-l); background: var(--brand-ll); border-radius: 3mm; padding: 3.6mm 3.6mm 3.8mm; }
+.fc .no { display: inline-flex; align-items: center; justify-content: center; width: 6.4mm; height: 6.4mm; border-radius: 50%; background: var(--brand); color: #fff; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 8.4pt; }
+.fc h3 { font-size: 9.6pt; font-weight: 900; color: var(--navy); line-height: 1.4; margin-top: 2mm; }
+.fc ul { list-style: none; margin-top: 2.2mm; }
+.fc li { font-size: 7.4pt; line-height: 1.5; color: var(--ink); font-weight: 500; padding-left: 3.6mm; position: relative; margin-top: 1mm; }
+.fc li::before { content: "✓"; position: absolute; left: 0; color: var(--brand); font-weight: 900; }
+
+/* 始め方 */
+.start { margin-top: 5mm; display: flex; gap: 5mm; align-items: stretch; }
+.st { flex: 1; }
+.steps { margin-top: 2.6mm; }
+.s1 { display: flex; gap: 2.6mm; align-items: flex-start; padding: 2mm 0; border-top: 0.3mm dashed var(--line); }
+.s1:first-child { border-top: 0; padding-top: 0; }
+.s1 .n { flex: 0 0 5.4mm; height: 5.4mm; border-radius: 50%; border: 0.4mm solid var(--brand); color: var(--brand); font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 7.6pt; display: flex; align-items: center; justify-content: center; }
+.s1 b { display: block; font-size: 8.4pt; font-weight: 900; color: var(--navy); line-height: 1.35; }
+.s1 span { display: block; font-size: 7pt; color: var(--sub); line-height: 1.5; margin-top: 0.4mm; }
+.scr { flex: 0 0 84mm; }
+.scr .win { border: 0.3mm solid var(--line); border-radius: 2.4mm; overflow: hidden; box-shadow: 0 1mm 3mm rgba(15,23,42,0.08); }
+.scr .bar { height: 4.4mm; background: #F1F3F8; display: flex; align-items: center; gap: 1.1mm; padding: 0 2.2mm; font-size: 5.8pt; color: var(--sub); font-weight: 700; }
+.scr .bar i { width: 1.6mm; height: 1.6mm; border-radius: 50%; background: #CBD2DF; display: block; }
+.scr .bar em { font-style: normal; margin-left: 1.6mm; }
+.scr img { width: 100%; display: block; }
+.scr .cap { font-size: 6pt; color: var(--sub); margin-top: 1.3mm; }
+
+/* デモ電話帯 */
+.demo { margin-top: auto; background: var(--navy); color: #fff; padding: 5mm 12mm; display: flex; align-items: center; gap: 6mm; }
+.demo .l1 { font-size: 7.6pt; font-weight: 700; color: var(--yellow); }
+.demo .tel { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 25pt; line-height: 1.1; letter-spacing: 0.01em; margin-top: 0.6mm; }
+.demo .tel small { font-family: 'Noto Sans JP', sans-serif; font-size: 8pt; font-weight: 700; margin-right: 2mm; color: #D5DCE8; }
+.demo .s { font-size: 6pt; color: #9AA6BC; margin-top: 1mm; line-height: 1.5; }
+.demo .qa { flex: 1; display: flex; flex-direction: column; gap: 1.4mm; }
+.demo .qa .h { font-size: 6.8pt; color: #B9C4D6; font-weight: 700; }
+.demo .qa span { align-self: flex-start; font-size: 7.6pt; font-weight: 700; background: #1E293F; border: 0.3mm solid #334263; border-radius: 3mm; padding: 1mm 3mm; }
+.demo .qr { flex: 0 0 auto; text-align: center; }
+.demo .qr img { width: 19mm; height: 19mm; background: #fff; padding: 1.2mm; border-radius: 1.6mm; display: block; }
+.demo .qr p { font-size: 5.8pt; color: #B9C4D6; margin-top: 1mm; }
+
+/* フッター帯 */
+.ft { flex: 0 0 12mm; background: var(--brand); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 0 12mm; }
+.ft .c { font-size: 7.8pt; font-weight: 700; }
+.ft .u { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 11.4pt; }
+.ft .u small { font-family: 'Noto Sans JP', sans-serif; font-size: 7.4pt; font-weight: 700; margin-left: 3mm; opacity: 0.9; }
+
+/* 裏面：4 コマ＋ステップ */
+.flow { padding-top: 6mm; }
+.flr { display: flex; gap: 5mm; margin-top: 3mm; align-items: stretch; }
+.flr .img { flex: 0 0 96mm; }
+.flr .img img { width: 100%; height: 64mm; object-fit: cover; border-radius: 3mm; display: block; }
+.flr .img .cap { font-size: 6pt; color: var(--sub); margin-top: 1.3mm; }
+.fsteps { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.fs { display: flex; gap: 2.6mm; align-items: flex-start; background: #F5F6F9; border-radius: 2.4mm; padding: 2.4mm 3mm; }
+.fs .n { flex: 0 0 5.4mm; height: 5.4mm; border-radius: 50%; background: var(--brand); color: #fff; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 7.6pt; display: flex; align-items: center; justify-content: center; }
+.fs b { display: block; font-size: 8.6pt; font-weight: 900; color: var(--navy); line-height: 1.35; }
+.fs span { display: block; font-size: 7pt; color: var(--sub); line-height: 1.5; margin-top: 0.3mm; }
+.fs.q { background: var(--brand-ll); }
+.fs.q span { color: var(--brand-d); font-weight: 700; }
+
+/* 裏面：価値＋事例 */
+.val { margin-top: 5mm; display: flex; gap: 3.6mm; }
+.vc { flex: 1; border: 0.3mm solid var(--line); border-radius: 3mm; padding: 3.4mm 3.8mm; }
+.vc .w { font-size: 7pt; font-weight: 700; color: var(--brand-d); }
+.vc .t { font-size: 9.6pt; font-weight: 900; color: var(--navy); line-height: 1.45; margin-top: 0.8mm; }
+.ext { margin-top: 2.6mm; font-size: 7.2pt; color: var(--sub); line-height: 1.55; background: #FFF8E1; border-radius: 2mm; padding: 1.8mm 3mm; }
+.ext b { color: var(--navy); }
+.case { margin-top: 4.4mm; display: flex; align-items: center; gap: 4mm; border: 0.3mm solid var(--brand-l); border-radius: 3mm; padding: 3mm 4mm; }
+.case .lb { flex: 0 0 auto; font-size: 6.8pt; font-weight: 700; color: #fff; background: var(--brand); border-radius: 1.4mm; padding: 0.8mm 2.4mm; }
+.case .who { font-size: 7pt; color: var(--sub); font-weight: 700; }
+.case .k { font-size: 9.4pt; font-weight: 900; color: var(--navy); line-height: 1.4; margin-top: 0.4mm; }
+.case .k em { font-style: normal; color: var(--brand); }
+.case .num { flex: 0 0 auto; margin-left: auto; text-align: right; font-weight: 900; color: var(--brand); font-size: 10pt; line-height: 1; white-space: nowrap; }
+.case .num .en { font-size: 26pt; font-weight: 800; }
+
+/* 裏面：お問い合わせ */
+.cta { margin-top: auto; background: var(--navy); color: #fff; padding: 5.4mm 12mm; display: flex; align-items: center; gap: 6mm; }
+.cta .box { display: flex; align-items: center; gap: 4mm; background: #fff; border-radius: 3mm; padding: 3mm 4.4mm; color: var(--navy); }
+.cta .box img { width: 21mm; height: 21mm; display: block; }
+.cta .box .h { font-size: 9.6pt; font-weight: 900; background: linear-gradient(transparent 62%, var(--yellow) 62%); display: inline; }
+.cta .box .u { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 17pt; color: var(--brand); line-height: 1.2; margin-top: 1.2mm; }
+.cta .box .s { font-size: 6.8pt; color: var(--sub); margin-top: 0.6mm; }
+.cta .co { flex: 1; }
+.cta .co .tag { display: inline-block; font-size: 7pt; font-weight: 700; color: var(--yellow); border: 0.3mm solid var(--yellow); border-radius: 10mm; padding: 0.6mm 3mm; }
+.cta .co .nm { font-size: 12pt; font-weight: 900; margin-top: 1.6mm; }
+.cta .co p { font-size: 6.8pt; color: #C5CEDD; line-height: 1.6; margin-top: 1mm; }
+.tm { font-size: 5.6pt; color: #8A96AB; background: var(--navy); padding: 0 12mm 3.4mm; }
+
+/* 2026-10-20 表面：管理画面は縮小すると読めないため外し、進め方を横帯 1 本に */
+.how { margin-top: 5mm; background: var(--brand-ll); padding: 4mm 12mm; display: flex; align-items: center; gap: 2.6mm; }
+.how .hh { flex: 0 0 44mm; }
+.how .hh h2 { font-size: 12.4pt; }
+.hs { flex: 1; display: flex; gap: 2mm; align-items: flex-start; background: #fff; border-radius: 2.4mm; padding: 2.4mm 2.6mm; }
+.hs .n { flex: 0 0 5.2mm; height: 5.2mm; border-radius: 50%; background: var(--brand); color: #fff; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 7.4pt; display: flex; align-items: center; justify-content: center; }
+.hs b { display: block; font-size: 8pt; font-weight: 900; color: var(--navy); line-height: 1.35; }
+.hs span { display: block; font-size: 6.6pt; color: var(--sub); line-height: 1.45; margin-top: 0.3mm; }
+.how .ar { font-style: normal; color: var(--yellow); font-size: 9pt; }
+.pc img { height: 22mm; }
+.pain { padding-top: 5.4mm; }
+/* 裏面：下の余白を 4 コマの拡大で埋める */
+.flr .img img { height: 76mm; }
+.val { margin-top: 5.4mm; }
+
+/* 2026-10-20 表面の余白を各区块に配分／裏面ステップ 1 の番号が見えない問題 */
+.pc img { height: 26mm; }
+.pain { padding-top: 6.4mm; }
+.bridge { margin: 5mm 0 4mm; }
+.fc { padding: 4.2mm 3.8mm 4.6mm; }
+.how { margin-top: 6.4mm; padding: 4.6mm 12mm; }
+.demo { padding: 5.6mm 12mm; }
+.fs.q .n { color: #fff; }
+
+/* 2026-10-22 情報密度アップ（ユーザー指摘「信息密度不够」）：Hero を詰め、数字・機能一覧・比較・事例数字・導入期間を追加 */
+.hero { flex: 0 0 66mm; }
+.hr img { height: 50mm; }
+h1 { font-size: 22pt; margin-top: 2.4mm; }
+.lead { font-size: 8.4pt; line-height: 1.65; margin-top: 2.2mm; }
+.kpi { display: flex; gap: 2mm; margin-top: 3mm; }
+.kpi div { flex: 1; background: #fff; border-radius: 2mm; padding: 1.6mm 2mm; border: 0.3mm solid var(--brand-l); }
+.kpi b { display: block; font-family: 'Outfit', 'Noto Sans JP', sans-serif; font-weight: 800; color: var(--brand); font-size: 13pt; line-height: 1.1; white-space: nowrap; }
+.kpi b small { font-size: 7.4pt; font-weight: 800; }
+.kpi span { display: block; font-size: 6.2pt; color: var(--sub); font-weight: 700; line-height: 1.35; margin-top: 0.4mm; }
+.note { font-size: 5.6pt; color: var(--sub); margin-top: 1mm; }
+.chips { display: flex; flex-wrap: wrap; gap: 1.2mm; margin-top: 2.6mm; }
+.chips span { font-size: 6.6pt; font-weight: 700; color: var(--brand-d); background: #fff; border: 0.3mm solid var(--brand-t); border-radius: 10mm; padding: 0.6mm 2.4mm; }
+
+.pain { padding-top: 4.4mm; }
+.pr { margin-top: 2.4mm; gap: 3mm; }
+.pc { display: flex; gap: 2.4mm; text-align: left; padding: 2.4mm; align-items: flex-start; }
+.pc img { flex: 0 0 20mm; width: 20mm; height: 20mm; object-position: center 30%; }
+.pc .w { margin-top: 0; }
+.pc .t { font-size: 8.2pt; }
+.pc p { font-size: 6.4pt; color: var(--sub); line-height: 1.5; margin-top: 0.8mm; }
+.bridge { margin: 3.4mm 0 2.6mm; font-size: 10pt; }
+.fc { padding: 3mm 3.4mm 3.2mm; }
+.fc .hd2 { display: flex; align-items: center; gap: 2mm; }
+.fc h3 { margin-top: 0; font-size: 9.2pt; }
+.fc ul { margin-top: 1.6mm; }
+.fc li { margin-top: 0.6mm; font-size: 7.2pt; }
+
+.fx { margin-top: 4.2mm; display: flex; gap: 4mm; }
+.fx .orig { flex: 0 0 96mm; }
+.fx .std { flex: 1; }
+.fx h4 { font-size: 8.6pt; font-weight: 900; color: var(--navy); margin-bottom: 1.6mm; }
+.fx h4 small { font-size: 6.4pt; color: var(--brand-d); font-weight: 700; margin-left: 1.6mm; }
+.og { display: flex; gap: 2mm; }
+.og div { flex: 1; background: var(--navy); color: #fff; border-radius: 2.2mm; padding: 2.2mm 2.4mm; }
+.og b { display: block; font-size: 7.8pt; font-weight: 900; color: #fff; }
+.og b::before { content: "★ "; color: var(--yellow); }
+.og span { display: block; font-size: 6.2pt; color: #C5CEDD; line-height: 1.5; margin-top: 0.8mm; }
+.sg { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2mm 2.4mm; }
+.sg span { font-size: 6.6pt; color: var(--ink); font-weight: 500; line-height: 1.4; padding-left: 3.4mm; position: relative; }
+.sg span::before { content: "✓"; position: absolute; left: 0; color: var(--brand); font-weight: 900; }
+.sg span b { color: var(--navy); }
+
+.cmp { margin-top: 4mm; }
+.cmp table { width: 100%; border-collapse: collapse; margin-top: 1.6mm; font-size: 6.6pt; line-height: 1.4; }
+.cmp th, .cmp td { border-bottom: 0.25mm solid var(--line); padding: 1.1mm 1.8mm; text-align: left; vertical-align: middle; }
+.cmp thead th { font-size: 6.6pt; color: var(--sub); font-weight: 700; background: #F5F6F9; }
+.cmp thead th.g { background: var(--brand); color: #fff; }
+.cmp tbody th { font-weight: 700; color: var(--navy); width: 26mm; }
+.cmp td { color: var(--sub); }
+.cmp td.g { background: var(--brand-ll); color: var(--navy); font-weight: 700; }
+.cmp h2 { font-size: 11.4pt; }
+
+.how { margin-top: 4mm; padding: 3mm 12mm; }
+.how .hh h2 { font-size: 11.4pt; }
+.hs { padding: 2mm 2.4mm; }
+.demo { padding: 4mm 12mm; gap: 5mm; }
+.demo .tel { font-size: 23pt; }
+.demo .qa { display: grid; grid-template-columns: auto auto; gap: 1.2mm; align-content: center; }
+.demo .qa .h { grid-column: 1 / -1; }
+.demo .qa span { font-size: 7pt; padding: 0.8mm 2.4mm; }
+.demo .qr img { width: 18mm; height: 18mm; }
+.ft { flex: 0 0 10mm; }
+
+/* 裏面 */
+.flow { padding-top: 4.4mm; }
+.flr { margin-top: 2.4mm; gap: 4mm; }
+.flr .img { flex: 0 0 88mm; }
+.flr .img img { height: 62mm; }
+.fs { padding: 1.8mm 2.6mm; }
+.fs b { font-size: 8.2pt; }
+.fs span { font-size: 6.6pt; }
+.fs em { display: block; font-style: normal; font-size: 6.2pt; color: var(--sub); line-height: 1.45; margin-top: 0.4mm; }
+.fs.q em { color: var(--sub); font-weight: 500; }
+
+.can { margin-top: 4mm; }
+.can h2 { font-size: 11.4pt; }
+.cg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2mm; margin-top: 2mm; }
+.cg div { border: 0.3mm solid var(--line); border-radius: 2.2mm; padding: 2mm 2.6mm; }
+.cg b { display: block; font-size: 7.8pt; font-weight: 900; color: var(--navy); }
+.cg span { display: block; font-size: 6.3pt; color: var(--sub); line-height: 1.5; margin-top: 0.5mm; }
+
+.cs { margin-top: 4mm; border: 0.3mm solid var(--brand-l); background: var(--brand-ll); border-radius: 3mm; padding: 3mm 4mm; }
+.cs .top { display: flex; align-items: center; gap: 3mm; }
+.cs .lb { flex: 0 0 auto; font-size: 6.8pt; font-weight: 700; color: #fff; background: var(--brand); border-radius: 1.4mm; padding: 0.8mm 2.4mm; }
+.cs .who { font-size: 7pt; color: var(--sub); font-weight: 700; }
+.cs .k { font-size: 9.2pt; font-weight: 900; color: var(--navy); line-height: 1.4; }
+.cs .body { display: flex; gap: 4mm; margin-top: 2.2mm; align-items: stretch; }
+.cs .nums { flex: 0 0 104mm; display: flex; gap: 1.8mm; }
+.cs .nums div { flex: 1; background: #fff; border-radius: 2mm; padding: 1.8mm 1.6mm; text-align: center; }
+.cs .nums b { display: block; font-family: 'Outfit', 'Noto Sans JP', sans-serif; font-weight: 800; font-size: 15pt; color: var(--brand); line-height: 1.1; white-space: nowrap; }
+.cs .nums b small { font-size: 7pt; font-weight: 800; }
+.cs .nums span { display: block; font-size: 6pt; color: var(--sub); font-weight: 700; line-height: 1.35; margin-top: 0.4mm; }
+.cs ul { flex: 1; list-style: none; }
+.cs li { font-size: 6.6pt; line-height: 1.5; color: var(--ink); padding-left: 3.4mm; position: relative; margin-top: 0.5mm; }
+.cs li::before { content: "✓"; position: absolute; left: 0; color: var(--brand); font-weight: 900; }
+
+.go { margin-top: 4mm; display: flex; gap: 4mm; align-items: stretch; }
+.go .gs { flex: 0 0 112mm; }
+.go h2 { font-size: 11.4pt; }
+.gl { display: flex; gap: 1.6mm; margin-top: 2mm; align-items: center; }
+.gl div { flex: 1; background: #F5F6F9; border-radius: 2mm; padding: 1.8mm 2.2mm; }
+.gl b { display: block; font-size: 7.6pt; font-weight: 900; color: var(--navy); }
+.gl b small { color: var(--brand-d); font-size: 6.2pt; margin-left: 1mm; }
+.gl span { display: block; font-size: 6.2pt; color: var(--sub); line-height: 1.45; margin-top: 0.4mm; }
+.gl i { font-style: normal; color: var(--yellow); font-size: 7.4pt; }
+.go .ext { flex: 1; margin-top: 0; display: flex; flex-direction: column; justify-content: center; font-size: 6.6pt; padding: 2.4mm 3mm; }
+.go .ext b { display: block; font-size: 7.8pt; margin-bottom: 0.6mm; }
+.cta { padding: 4.4mm 12mm; }
+/* 2026-10-22 はみ出し 12mm 前後を詰める */
+.hero { flex: 0 0 64mm; }
+.hr img { height: 48mm; }
+.chips { gap: 1mm; margin-top: 2mm; }
+.chips span { font-size: 6.2pt; padding: 0.5mm 2mm; }
+.pc img { flex-basis: 17mm; width: 17mm; height: 17mm; }
+.pc .t { font-size: 7.8pt; line-height: 1.35; }
+.pc p { font-size: 6.2pt; line-height: 1.45; margin-top: 0.5mm; }
+.pain { padding-top: 3.6mm; }
+.bridge { margin: 2.8mm 0 2.2mm; }
+.fc { padding: 2.6mm 3.2mm 2.8mm; }
+.fc ul { margin-top: 1.2mm; }
+.fc li { margin-top: 0.4mm; }
+.fx { margin-top: 3.4mm; }
+.fx .orig { flex-basis: 100mm; }
+.og div { padding: 1.8mm 2.2mm; }
+.og b { font-size: 7.4pt; white-space: nowrap; }
+.cmp { margin-top: 3.2mm; }
+.cmp table { margin-top: 1.2mm; }
+.cmp th, .cmp td { padding: 0.8mm 1.8mm; }
+.how { margin-top: 3.4mm; padding: 2.6mm 12mm; }
+.demo { padding: 3.6mm 12mm; }
+.flow { padding-top: 3.6mm; }
+.flr .img img { height: 56mm; }
+.fs { padding: 1.5mm 2.6mm; }
+.can { margin-top: 3.4mm; }
+.cg div { padding: 1.6mm 2.4mm; }
+.cs { margin-top: 3.4mm; padding: 2.6mm 4mm; }
+.go { margin-top: 3.4mm; }
+.cta { padding: 4mm 12mm; }
+/* 2026-10-22 表面 Hero の※注記が切れる→Hero を伸ばし、残りを区块間に配分 */
+.page:first-of-type .hero { flex-basis: 72mm; }
+.page:first-of-type .hr img { height: 54mm; }
+.page:first-of-type .cmp th, .page:first-of-type .cmp td { padding: 1.1mm 1.8mm; }
+.page:first-of-type .fx { margin-top: 4mm; }
+.page:first-of-type .how { margin-top: 4.4mm; }
+
+/* 2026-10-26 裏面を「占いAI（診断でおすすめ）」に差し替え：画面イメージは HTML で描く（他社資料の画面は使わない） */
+.dmock { display: flex; gap: 3mm; justify-content: center; }
+.dscr { width: 40mm; height: 52mm; background: #fff; border-radius: 3mm; box-shadow: 0 1.5mm 4mm rgba(40,30,110,0.14); padding: 2.4mm; display: flex; flex-direction: column; gap: 1.2mm; font-size: 6.2pt; color: var(--ink); }
+.dscr .bar { font-size: 6pt; color: var(--sub); text-align: center; font-weight: 700; }
+.dscr .bar b { color: var(--brand); }
+.dscr .ai { background: var(--brand-ll); border-radius: 1.6mm; padding: 1.4mm 1.8mm; font-weight: 700; color: var(--navy); line-height: 1.45; }
+.dscr .ai i { font-style: normal; display: inline-block; background: var(--brand); color: #fff; border-radius: 50%; width: 3.8mm; height: 3.8mm; line-height: 3.8mm; text-align: center; font-size: 4.8pt; margin-right: 1mm; }
+.dscr .op { border: 0.3mm solid var(--line); border-radius: 1.4mm; padding: 1mm 1.6mm; }
+.dscr .op.on { border-color: var(--brand); background: var(--brand-l); color: var(--brand-d); font-weight: 700; }
+.dscr .re { font-size: 5.6pt; color: var(--sub); line-height: 1.45; margin-top: auto; }
+.dscr.res { margin-top: 6mm; }
+.dscr .ty { text-align: center; font-size: 8pt; font-weight: 900; color: var(--brand-d); line-height: 1.3; }
+.dscr .ty small { display: block; font-size: 5.6pt; color: var(--sub); font-weight: 500; }
+.dscr .pd { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1mm; }
+.dscr .pd span { height: 8mm; border-radius: 1mm; background: linear-gradient(135deg, #EEE9FF, #FFF3D6); }
+.dscr .pdc { font-size: 5.4pt; color: var(--sub); text-align: center; }
+.dscr .rt { margin-top: auto; background: var(--brand); color: #fff; text-align: center; border-radius: 10mm; font-weight: 700; padding: 0.9mm 0; }
+.fl4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.6mm; margin-top: 2.4mm; }
+.fl4 .fs { flex-direction: column; gap: 1.4mm; }
+/* 2026-10-26 占いAI 調整：番号丸が潰れる → 固定サイズ / 下の余白 → 各段の間隔とカードの高さで配分 */
+.fl4 .fs .n { flex: 0 0 auto; width: 5.4mm; height: 5.4mm; }
+.fl4 .fs { padding: 2.6mm 3mm 3mm; }
+.can .cg > div { padding-top: 2.6mm; padding-bottom: 2.8mm; }
+.can { padding-top: 5mm; }
+.flow { padding-top: 5.5mm; }
+/* 2026-10-26 公平な仕組み：アイコン付きカードに（淡紫グラデ＋左のブランド線） */
+.cg .fc { display: flex; gap: 2.4mm; align-items: flex-start; border: 0.3mm solid var(--brand-l); border-left: 0.9mm solid var(--brand); background: linear-gradient(120deg, var(--brand-ll) 0%, #fff 75%); padding: 2.8mm 2.8mm 3mm 2.6mm; }
+.cg .fic { flex: 0 0 7mm; height: 7mm; border-radius: 50%; background: #fff; border: 0.3mm solid var(--brand-t); display: flex; align-items: center; justify-content: center; }
+.cg .fic svg { width: 4mm; height: 4mm; fill: none; stroke: var(--brand-d); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.cg .fc p { margin: 0; }
+.cg .fc b { font-size: 8pt; }
+.cg .fc span { font-size: 6.4pt; margin-top: 0.6mm; }
+.can .cg { gap: 2.4mm; margin-top: 2.6mm; }
+/* 2026-10-26 「IVR・ボイスボットとの違い」→ 導入効果の目安を図で（ヒーローの数値カードは重複するので削除） */
+.kv { margin-top: 3.2mm; }
+.kv h2 { font-size: 11.4pt; }
+.kg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6mm; margin-top: 2.2mm; }
+.kc { background: var(--brand-ll); border-radius: 2.4mm; padding: 2.6mm 3mm 2.8mm; display: flex; flex-direction: column; gap: 2mm; }
+.kh b { display: block; font-size: 17pt; font-weight: 800; color: var(--brand); line-height: 1.05; }
+.kh b small { font-size: 9pt; }
+.kh span { display: block; font-size: 7.2pt; font-weight: 700; color: var(--navy); margin-top: 0.6mm; }
+.stk { display: flex; height: 6mm; border-radius: 1.2mm; overflow: hidden; margin-top: auto; }
+.stk .ai { flex: 0 0 70%; background: var(--brand); }
+.stk .rg { flex: 0 0 20%; background: repeating-linear-gradient(135deg, var(--brand) 0 1.2mm, #A99CF0 1.2mm 2.4mm); }
+.stk .hu { flex: 1; background: #D9DDE8; }
+.lg { display: flex; gap: 3mm; font-size: 6pt; color: var(--sub); }
+.lg em { display: inline-block; width: 2.4mm; height: 2.4mm; border-radius: 0.6mm; margin-right: 0.8mm; vertical-align: -0.3mm; }
+.lg .d1 { background: var(--brand); } .lg .d2 { background: #D9DDE8; }
+.bars2 { position: relative; display: flex; align-items: flex-end; gap: 4mm; height: 17mm; margin-top: auto; padding-left: 2mm; }
+.bars2 .col { display: flex; flex-direction: column; align-items: center; gap: 0.8mm; }
+.bars2 small { font-size: 6pt; color: var(--sub); }
+.bars2 .b0 { width: 10mm; height: 13mm; background: #D9DDE8; border-radius: 1mm 1mm 0 0; }
+.bars2 .b1 { width: 10mm; height: 6.5mm; background: var(--brand); border-radius: 1mm 1mm 0 0; position: relative; }
+.bars2 .b1 i { position: absolute; left: 0; right: 0; bottom: 100%; height: 2.6mm; background: repeating-linear-gradient(135deg, var(--brand) 0 1mm, #C9BFFF 1mm 2mm); border-radius: 1mm 1mm 0 0; opacity: 0.7; }
+.bars2 .dn { position: absolute; right: 0; top: 1mm; font-size: 7pt; font-weight: 900; color: var(--brand-d); }
+.tl { margin-top: auto; display: flex; flex-direction: column; gap: 1.2mm; }
+.tl .row { display: flex; align-items: center; gap: 1.6mm; }
+.tl .row em { flex: 0 0 5mm; font-style: normal; font-size: 6pt; font-weight: 700; color: var(--sub); }
+.tl .tr { flex: 1; height: 4mm; background: #EEF0F5; border-radius: 1mm; position: relative; overflow: hidden; }
+.tl .st { position: absolute; left: 41.7%; width: 41.6%; top: 0; bottom: 0; background: #B9C0D0; }
+.tl .al { position: absolute; inset: 0; background: var(--brand); }
+.tl .ax { display: flex; justify-content: space-between; padding-left: 6.6mm; font-size: 5.4pt; color: var(--sub); }
+.kn { font-size: 5.8pt; color: var(--sub); margin-top: 1.4mm; }
+/* 2026-10-26 表面：ヒーローの数値カードを外した分、ヒーローを低く（A4 に収める） */
+section.page:first-of-type .hero { flex: 0 0 60mm; }
+section.page:first-of-type .hr img { height: 46mm; }
+/* 2026-10-26 表面「導入の進め方」帯を削除 → 空いた約 24mm を各区块へ配分／裏面の下余白（約 19mm）も配分 */
+section.page:first-of-type .hero { flex: 0 0 68mm; }
+section.page:first-of-type .hr img { height: 54mm; }
+section.page:first-of-type .lead { font-size: 8.8pt; line-height: 1.75; margin-top: 3mm; }
+section.page:first-of-type .pain { padding-top: 5.4mm; }
+section.page:first-of-type .pr { margin-top: 3mm; }
+section.page:first-of-type .pc { padding: 3mm 2.6mm; gap: 2.4mm; }
+section.page:first-of-type .pc img { flex-basis: 18mm; width: 18mm; height: 18mm; }
+section.page:first-of-type .bridge { margin: 3.8mm 0 3mm; }
+section.page:first-of-type .fc { padding: 3.4mm 3.6mm 3.6mm; }
+section.page:first-of-type .fc ul { margin-top: 1.8mm; }
+section.page:first-of-type .fx { margin-top: 6mm; }
+section.page:first-of-type .og div { padding: 2.4mm 2.4mm; }
+section.page:first-of-type .kv { margin-top: 6.4mm; }
+section.page:first-of-type .kc { padding: 3.2mm 3.4mm 3.4mm; }
+section.page:first-of-type .kn { margin-top: 1.8mm; }
+section.page:nth-of-type(2) .flow { padding-top: 6.4mm; }
+section.page:nth-of-type(2) .flr { margin-top: 3mm; }
+section.page:nth-of-type(2) .flr .img img { height: 60mm; }
+section.page:nth-of-type(2) .can { padding-top: 6.4mm; }
+section.page:nth-of-type(2) .can .cg { margin-top: 3mm; gap: 3mm; }
+section.page:nth-of-type(2) .cg .fc { padding: 3.4mm 3mm 3.6mm 2.8mm; }
+section.page:nth-of-type(2) .go { margin-top: 6mm; }
+section.page:nth-of-type(2) .gl { margin-top: 2.6mm; }
+section.page:nth-of-type(2) .gl div { padding: 2.4mm 2.4mm; }
+/* 2026-10-26 導入効果の目安：3 枚を青・緑・橙で色分け */
+.kg .kc:nth-child(1) { --c: #2F7BEA; --cl: #A9C8F7; --cb: #EAF2FE; }
+.kg .kc:nth-child(2) { --c: #1E9E62; --cl: #9FD9BB; --cb: #E7F6EE; }
+.kg .kc:nth-child(3) { --c: #EE8320; --cl: #F8C794; --cb: #FEF1E4; }
+.kg .kc { background: var(--cb); border-top: 1mm solid var(--c); }
+.kg .kh b { color: var(--c); }
+.kg .stk .ai, .kg .lg .d1, .kg .bars2 .b1, .kg .tl .al { background: var(--c); }
+.kg .stk .rg { background: repeating-linear-gradient(135deg, var(--c) 0 1.2mm, var(--cl) 1.2mm 2.4mm); }
+.kg .bars2 .b1 i { background: repeating-linear-gradient(135deg, var(--c) 0 1mm, var(--cl) 1mm 2mm); }
+.kg .bars2 .dn { color: var(--c); }
+.kg .stk .hu, .kg .lg .d2, .kg .bars2 .b0 { background: #D3D8E3; }
+.kg .tl .tr { background: #fff; }
+/* 2026-10-26 色の単調さ対策：表面の効果カードと同じ青・緑・橙＋ブランド紫で、裏面のステップ／カード／導入期間を色分け */
+:root { --c-blue: #2F7BEA; --c-blue-l: #EAF2FE; --c-green: #1E9E62; --c-green-l: #E7F6EE; --c-orange: #EE8320; --c-orange-l: #FEF1E4; }
+/* 表面：お悩みは暖色、解決は紫で「課題→解決」のコントラスト */
+section.page:first-of-type .pc { background: #FFF5EC; }
+section.page:first-of-type .pc .w { color: #C7621A; }
+section.page:first-of-type .pc img { border: 0.3mm solid #F6DCC6; }
+/* 裏面ヒーロー：おすすめ 5 品のタイルにアイコン */
+.dscr .pd span { display: flex; align-items: center; justify-content: center; }
+.dscr .pd span svg { width: 4.6mm; height: 4.6mm; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.dscr .pd span:nth-child(1) { background: #F1EEFE; } .dscr .pd span:nth-child(1) svg { stroke: var(--brand); }
+.dscr .pd span:nth-child(2) { background: var(--c-green-l); } .dscr .pd span:nth-child(2) svg { stroke: var(--c-green); }
+.dscr .pd span:nth-child(3) { background: var(--c-orange-l); } .dscr .pd span:nth-child(3) svg { stroke: var(--c-orange); }
+.dscr .pd span:nth-child(4) { background: var(--c-blue-l); } .dscr .pd span:nth-child(4) svg { stroke: var(--c-blue); }
+.dscr .pd span:nth-child(5) { background: #FFF6D6; } .dscr .pd span:nth-child(5) svg { stroke: #D9A400; }
+/* 裏面ステップ：紫→青→緑→橙 */
+.fsteps .fs { --c: var(--brand); --cb: var(--brand-ll); background: var(--cb); border-left: 0.9mm solid var(--c); }
+.fsteps .fs .n { background: var(--c); color: #fff; }
+.fsteps .fs span { color: var(--c); font-weight: 700; }
+.fsteps .fs.q span { color: var(--c); }
+.fsteps .fs span.n, .fsteps .fs.q span.n { color: #fff; }
+/* 公平な仕組み：列ごとに青・緑・橙 */
+.cg .fc { --c: var(--c-blue); --cb: var(--c-blue-l); border-left-color: var(--c); border-color: var(--cb); border-left-color: var(--c); background: linear-gradient(120deg, var(--cb) 0%, #fff 78%); }
+.cg .fic { border-color: var(--c); background: #fff; }
+.cg .fic svg { stroke: var(--c); }
+/* 導入期間：期間の長さを色帯で */
+.gl div { --c: var(--c-blue); background: #F5F6F9; border-top: 1mm solid var(--c); }
+.gl div:nth-of-type(2) { --c: var(--c-green); }
+.gl div:nth-of-type(3) { --c: var(--c-orange); background: var(--c-orange-l); }
+.gl b small { color: var(--c); }
+.gl i { color: #B9C0D0; }
+/* 2026-10-26 独自機能／標準機能：1 枚のパネルに（左＝紫グラデ＋アイコン、右＝淡色のアイコン付きタグ） */
+section.page:first-of-type .fx { gap: 0; border-radius: 3mm; overflow: hidden; border: 0.3mm solid var(--brand-l); }
+.fx .orig { flex: 0 0 104mm; background: linear-gradient(135deg, #2B2170 0%, #4A3BB5 100%); padding: 3mm 3.4mm 3.4mm; }
+.fx .orig h4 { color: #fff; display: flex; align-items: center; gap: 1.6mm; margin-bottom: 2.2mm; }
+.fx .orig h4 em { font-style: normal; font-family: 'Outfit', sans-serif; font-size: 6pt; font-weight: 800; letter-spacing: 0.08em; background: var(--yellow); color: var(--navy); border-radius: 1mm; padding: 0.3mm 1.4mm; }
+.fx .og { gap: 2mm; }
+.fx .og div { background: rgba(255,255,255,0.09); border: 0.3mm solid rgba(255,255,255,0.16); border-radius: 2.2mm; padding: 2.4mm 2.4mm 2.6mm; }
+.fx .og .oi { display: flex; width: 6.4mm; height: 6.4mm; border-radius: 50%; background: var(--yellow); align-items: center; justify-content: center; margin-bottom: 1.6mm; }
+.fx .og .oi svg { width: 3.8mm; height: 3.8mm; fill: none; stroke: var(--navy); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.fx .og b { font-size: 7.6pt; white-space: nowrap; }
+.fx .og b::before { content: none; }
+.fx .og span { color: #D4D0F5; }
+.fx .std { background: #F6F7FB; padding: 3mm 3.4mm 3.4mm; display: flex; flex-direction: column; }
+.fx .std h4 { margin-bottom: 2.2mm; }
+.fx .sg { flex: 1; grid-template-columns: 1fr 1fr; gap: 1.4mm 1.6mm; align-content: space-between; }
+.fx .sg span { display: flex; align-items: center; gap: 1.3mm; background: #fff; border: 0.3mm solid var(--line); border-radius: 1.6mm; padding: 1.1mm 1.6mm; font-size: 6.3pt; color: var(--sub); white-space: nowrap; }
+.fx .sg span::before { content: none; }
+.fx .sg span b { color: var(--navy); }
+.fx .sg i { flex: 0 0 4.4mm; height: 4.4mm; border-radius: 1.2mm; background: var(--brand-ll); display: flex; align-items: center; justify-content: center; }
+.fx .sg i svg { width: 3mm; height: 3mm; fill: none; stroke: var(--brand); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+/* 2026-10-26 独自／標準：縦積みに変更（上＝紫帯 横 3 枚、下＝標準機能タグ 4 列） */
+section.page:first-of-type .fx { flex-direction: column; }
+.fx .orig, .fx .std { flex: 0 0 auto; display: flex; align-items: center; gap: 3mm; padding: 2.6mm 3.4mm; }
+.fx .orig h4, .fx .std h4 { flex: 0 0 25mm; margin: 0; font-size: 8.6pt; line-height: 1.35; }
+.fx .orig h4 { flex-direction: column; align-items: flex-start; gap: 1mm; }
+.fx .og { flex: 1; }
+.fx .og div { display: flex; gap: 2mm; align-items: flex-start; padding: 2mm 2.2mm; }
+.fx .og .oi { flex: 0 0 6.2mm; height: 6.2mm; margin: 0; }
+.fx .og p { margin: 0; }
+.fx .og span { margin-top: 0.4mm; font-size: 6pt; }
+.fx .sg { flex: 1; grid-template-columns: repeat(4, 1fr); gap: 1.4mm; }
+.fx .sg span { padding: 1mm 1.4mm; font-size: 6.2pt; gap: 1.2mm; overflow: hidden; }
+.fx .sg span b { margin-right: 0.6mm; }
+.fx .std { flex-direction: row; }
+.fx .sg { align-content: start; }
+.fx .orig h4, .fx .std h4 { flex-basis: 28mm; font-size: 8.4pt; white-space: nowrap; }
+/* 独自／標準パネル追加分の高さを各所で吸収 */
+.fx .orig { padding: 2.2mm 3.4mm; }
+.fx .og div { padding: 1.6mm 2mm; }
+.fx .std { padding: 2mm 3.4mm; }
+.fx .sg { gap: 1.2mm; }
+.fx .sg span { padding: 0.7mm 1.3mm; }
+.fx .sg i { flex-basis: 4mm; height: 4mm; }
+section.page:first-of-type .fx { margin-top: 5mm; }
+section.page:first-of-type .kv { margin-top: 5mm; }
+section.page:first-of-type .kc { padding: 2.8mm 3.2mm 3mm; gap: 1.4mm; }
+section.page:first-of-type .hero { flex-basis: 65mm; }
+section.page:first-of-type .hr img { height: 51mm; }
+section.page:first-of-type .pain { padding-top: 4.4mm; }
+section.page:first-of-type .pc { padding: 2.6mm 2.6mm; }
+section.page:first-of-type .bridge { margin: 3.2mm 0 2.6mm; }
+section.page:first-of-type .fc { padding: 3mm 3.4mm 3.2mm; }
+section.page:first-of-type .kn { margin-top: 1.2mm; }
+.fx .og span { white-space: nowrap; }
+/* 2026-10-26 公平な仕組み：6 枚とも青に統一（見出しの強調色も青） */
+.can h2 span { color: var(--c-blue); }
+/* 2026-10-26 区块見出しは紺一色（強調の跳色なし） */
+h1 span, h2 span, .can h2 span, .kv h2 span, .go h2 span, .bridge span { color: var(--navy); }
+/* 2026-10-26 Hero 右上の装飾円を削除 */
+.hero::before { content: none; }
+/* 2026-10-26 人員削減グラフの比率を数値に合わせる：導入前 14mm → 導入後 30%(4.2mm)〜50%(+2.8mm 斜線) */
+.bars2 { height: 18mm; }
+.bars2 .b0 { height: 14mm; }
+.bars2 .b1 { height: 4.2mm; }
+.bars2 .b1 i { height: 2.8mm; }
+/* 2026-10-26 診断結果タイルを 6 枚に（6 枚目は「ほかの候補」：おすすめ 5 品の表記は維持） */
+.dscr .pd span.more { background: #fff; border: 0.3mm dashed var(--brand-t); color: var(--brand-d); font-size: 5pt; font-weight: 700; line-height: 1.25; text-align: center; }
+/* 2026-10-26 裏面のカードが同じ見た目→区块ごとに型を変える */
+/* ① 利用ステップ：縦タイムライン（背景なし・点線でつなぐ） */
+.fsteps { position: relative; }
+.fsteps::before { content: ""; position: absolute; left: 3.1mm; top: 5mm; bottom: 5mm; border-left: 0.5mm dashed var(--brand-t); }
+.fsteps .fs { background: transparent; border-left: 0; border-radius: 0; padding: 1.6mm 0 2mm 0; gap: 3.2mm; border-bottom: 0.3mm solid var(--line); }
+.fsteps .fs:last-child { border-bottom: 0; }
+.fsteps .fs .n { position: relative; z-index: 1; flex: 0 0 6.6mm; width: 6.6mm; height: 6.6mm; font-size: 8.4pt; box-shadow: 0 0 0 1mm #fff; }
+.fsteps .fs b { font-size: 8.8pt; }
+/* ② 公平な仕組み：白カード＋影、アイコンは青ベタの角丸 */
+.cg .fc { background: #fff; border: 0.3mm solid #E3E8F2; border-left: 0.3mm solid #E3E8F2; border-radius: 2.6mm; box-shadow: 0 1mm 3mm rgba(15,23,42,0.07); }
+.cg .fic { flex-basis: 7.4mm; height: 7.4mm; border: 0; border-radius: 2mm; background: var(--c-blue); }
+.cg .fic svg { stroke: #fff; }
+/* ③ 導入期間：矢羽根型のステップ */
+.gl { gap: 0; }
+.gl i { display: none; }
+.gl div { border-top: 0; border-radius: 0; padding: 2.2mm 4mm 2.4mm 5mm; margin-left: -1.6mm; clip-path: polygon(0 0, calc(100% - 3mm) 0, 100% 50%, calc(100% - 3mm) 100%, 0 100%, 3mm 50%); background: var(--c-blue-l); }
+.gl div:first-of-type { margin-left: 0; padding-left: 3mm; clip-path: polygon(0 0, calc(100% - 3mm) 0, 100% 50%, calc(100% - 3mm) 100%, 0 100%); border-radius: 2mm 0 0 2mm; }
+.gl div:nth-of-type(2) { background: var(--c-green-l); }
+.gl div:nth-of-type(3) { background: var(--c-orange); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 3mm 50%); border-radius: 0 2mm 2mm 0; padding-right: 3mm; }
+.gl div:nth-of-type(3) b, .gl div:nth-of-type(3) span { color: #fff; }
+.gl b { color: var(--navy); }
+.fsteps::before { content: none; }
+.fsteps .fs { position: relative; }
+.fsteps .fs:not(:last-child)::after { content: ""; position: absolute; left: 3.05mm; top: 8.6mm; bottom: -2.2mm; border-left: 0.5mm dashed var(--brand-t); }
+.gl { align-items: stretch; }
+.gl div { display: flex; flex-direction: column; justify-content: center; }
+.gl div:nth-of-type(2), .gl div:nth-of-type(3) { padding-left: 6mm; }
+section.page:nth-of-type(2) .gl div { padding: 2.2mm 4.4mm 2.4mm 6.2mm; }
+section.page:nth-of-type(2) .gl div:first-of-type { padding-left: 3.2mm; }
+section.page:nth-of-type(2) .gl div:nth-of-type(3) { padding-right: 3.2mm; }
+.gl span { white-space: nowrap; }
+section.page:nth-of-type(2) .gl div { padding-top: 3mm; padding-bottom: 3.2mm; }
+section.page:nth-of-type(2) .go { margin-top: 7.4mm; }
+/* 2026-10-26 4 コマの区切り線を白に（画像の黒線の上に白線を重ねる。黒線は画像中央 50%） */
+.flr .img .cm { position: relative; display: block; border-radius: 3mm; overflow: hidden; }
+.flr .img .cm i { position: absolute; background: #fff; }
+.flr .img .cm .v { top: 0; bottom: 0; left: 50%; width: 0.9mm; transform: translateX(-50%); }
+.flr .img .cm .h { left: 0; right: 0; top: 50%; height: 0.9mm; transform: translateY(-50%); }
+/* 2026-10-26 導入期間の「運用開始」を紫に */
+section.page:nth-of-type(2) .gl div:nth-of-type(3) { background: var(--brand); }
+/* 2026-10-26 表面 Hero：画像の影を外し、背景を淡紫→暖色クリームのグラデにして画像（ベージュ系）となじませる */
+section.page:first-of-type .hero { background: linear-gradient(100deg, #F3F0FC 0%, #F5F0F5 42%, #F8EFE4 72%, #F6EADB 100%); }
+section.page:first-of-type .hr img { box-shadow: none; }
+/* 2026-10-26 企画相談ボックスにアイコン（電球） */
+.go .ext { flex-direction: row; align-items: center; gap: 3mm; }
+.go .ext .ei { flex: 0 0 9mm; height: 9mm; border-radius: 50%; background: var(--yellow); display: flex; align-items: center; justify-content: center; }
+.go .ext .ei svg { width: 5.2mm; height: 5.2mm; fill: none; stroke: var(--navy); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.go .ext .et { display: block; }
+/* 2026-10-26 裏面フッター：タグ削除、右側の空白を QR ボックス拡大と社名・住所の拡大で埋める */
+.cta { gap: 8mm; }
+.cta .box { flex: 0 0 112mm; padding: 3.4mm 5mm; gap: 5mm; }
+.cta .box img { width: 23mm; height: 23mm; }
+.cta .box .h { font-size: 10.4pt; }
+.cta .box .u { font-size: 19pt; }
+.cta .box .s { font-size: 7.4pt; }
+.cta .co .nm { font-size: 14pt; margin-top: 0; }
+.cta .co p { font-size: 7.6pt; line-height: 1.7; margin-top: 1.6mm; }
+.cta { gap: 10mm; padding-top: 3.6mm; padding-bottom: 3.6mm; }
+.cta .box { flex: 0 0 auto; padding: 3mm 7mm 3mm 4.4mm; }
+.cta .box img { width: 22mm; height: 22mm; }
+.cta { justify-content: space-between; }
+.cta .co { flex: 0 0 auto; }
+.cta .co .nm { font-size: 15.4pt; }
+.cta .co p { font-size: 8.2pt; }
+/* 2026-10-26 見出し上の小見出し（kicker）削除分を配分 */
+section.page:first-of-type .pain { padding-top: 6mm; }
+section.page:first-of-type .fx { margin-top: 6.4mm; }
+section.page:first-of-type .kv { margin-top: 6.4mm; }
+section.page:nth-of-type(2) .flow { padding-top: 7.4mm; }
+section.page:nth-of-type(2) .flr .img img { height: 63mm; }
+section.page:nth-of-type(2) .can { padding-top: 7.4mm; }
+/* 2026-10-26 裏面フッター再構成：カードを横いっぱいに、右端に無料トライアルのバッジ、社名は縦線で区切る */
+.cta { justify-content: flex-start; gap: 0; }
+.cta .box { flex: 1; padding: 3.2mm 4mm 3.2mm 4.4mm; gap: 4.4mm; }
+.cta .box .trial { margin-left: auto; flex: 0 0 auto; text-align: center; background: var(--brand-ll); border: 0.3mm solid var(--brand-t); border-radius: 2.4mm; padding: 2mm 3.4mm; font-size: 7.4pt; font-weight: 700; color: var(--brand-d); line-height: 1.3; }
+.cta .box .trial small { display: block; font-size: 6pt; color: var(--sub); }
+.cta .box .trial b { display: block; font-family: 'Outfit', 'Noto Sans JP', sans-serif; font-size: 15pt; font-weight: 800; color: var(--brand); line-height: 1.15; }
+.cta .co { flex: 0 0 auto; margin-left: 6mm; padding-left: 6mm; border-left: 0.3mm solid #334263; }
+.cta .co .nm { font-size: 13pt; }
+.cta .co p { font-size: 7.4pt; line-height: 1.65; }
+/* 2026-10-26 トライアル表記は外す：カードは中身の幅＋文字を大きく、社名ブロックが残りを使う */
+.cta .box { flex: 0 0 auto; padding: 3.4mm 8mm 3.4mm 4.6mm; gap: 5mm; }
+.cta .box img { width: 23mm; height: 23mm; }
+.cta .box .h { font-size: 11pt; }
+.cta .box .u { font-size: 22pt; margin-top: 1.6mm; }
+.cta .co { flex: 1; margin-left: 7mm; padding-left: 7mm; }
+.cta .co .nm { font-size: 14pt; }
+.cta .co p { font-size: 7.8pt; }
+/* 2026-10-26 レビュー反映：企画例・導入期間の注記 */
+.cnote { font-size: 5.8pt; color: var(--sub); margin-top: 1.4mm; }
+/* 注記 2 行の追加分を裏面の余白から吸収 */
+section.page:nth-of-type(2) .flow { padding-top: 6mm; }
+section.page:nth-of-type(2) .flr .img img { height: 58mm; }
+section.page:nth-of-type(2) .can { padding-top: 6mm; }
+section.page:nth-of-type(2) .cg .fc { padding: 3mm 3mm 3.2mm 2.8mm; }
+section.page:nth-of-type(2) .go { margin-top: 5.6mm; }
+/* 2026-10-26 表面の上下バランス：中段の濃紫パネルを淡色に（濃色は下部のデモ帯・フッターだけ）、Hero のグラデを一段濃く */
+section.page:first-of-type .hero { background: linear-gradient(100deg, #E9E4FB 0%, #EFE8F6 40%, #F6EBDD 72%, #F3E4D0 100%); }
+section.page:first-of-type .lead { color: #4A5468; }
+.fx .orig { background: linear-gradient(120deg, #EEEAFD 0%, #E7E2FB 100%); }
+.fx .orig h4 { color: var(--navy); }
+.fx .og div { background: #fff; border: 0.3mm solid var(--brand-l); }
+.fx .og .oi { background: var(--brand); }
+.fx .og .oi svg { stroke: #fff; }
+.fx .og b { color: var(--navy); }
+.fx .og span { color: var(--sub); }
+.fx .std { background: #fff; border-top: 0.3mm solid var(--brand-l); }
+.fx .sg span { background: #F7F8FB; }
+/* 独自機能の帯を一段濃く */
+.fx .orig { background: linear-gradient(120deg, #DDD6FA 0%, #D2C9F7 100%); }
+.fx .og div { border-color: #C9BFF3; }
+.fx .orig h4 { white-space: normal; line-height: 1.4; }
+/* 2026-10-26 解決カード 1〜3 を白カード＋影に（下の「独自の機能」紫帯と区別） */
+section.page:first-of-type .fr .fc { background: #fff; border: 0.3mm solid #E3E8F2; box-shadow: 0 1mm 3mm rgba(15,23,42,0.07); }
+/* 2026-10-26 導入効果カードを明るく：白カード＋鮮やかな色＋グラデ数字、グレーを淡く */
+.kg .kc:nth-child(1) { --c: #2F6BFF; --c2: #22B8F0; --cl: #BFD3FF; --tint: #EEF4FF; }
+.kg .kc:nth-child(2) { --c: #12B886; --c2: #5FD38D; --cl: #B5EBD6; --tint: #E9FAF3; }
+.kg .kc:nth-child(3) { --c: #FF7A1A; --c2: #FFB020; --cl: #FFD3A8; --tint: #FFF3E6; }
+.kg .kc { background: #fff; border: 0.3mm solid #E6EAF2; border-top: 0; border-radius: 3mm; box-shadow: 0 1mm 3mm rgba(15,23,42,0.06); position: relative; overflow: hidden; }
+.kg .kc::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 0.8mm; background: linear-gradient(90deg, var(--c), var(--c2)); }
+.kg .kh b { background: linear-gradient(90deg, var(--c), var(--c2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.kg .stk { background: #EEF1F6; }
+.kg .stk .ai, .kg .bars2 .b1, .kg .tl .al { background: linear-gradient(90deg, var(--c), var(--c2)); }
+.kg .bars2 .b1 { background: linear-gradient(0deg, var(--c), var(--c2)); }
+.kg .lg .d1 { background: var(--c); }
+.kg .stk .hu, .kg .lg .d2, .kg .bars2 .b0 { background: #E4E8EF; }
+.kg .tl .tr { background: var(--tint); }
+.kg .tl .st { background: #CDD3DE; }
+.kg .bars2 .dn { color: var(--c); }
+/* ===== 2026-10-26 全体配色を「導入効果」の明るいパレットに統一 =====
+   主色：ブランド紫 #705EE2（→ #8F7CFF グラデ）／アクセント：青 #2F6BFF→#22B8F0、緑 #12B886→#5FD38D、橙 #FF7A1A→#FFB020
+   ニュートラル：白カード＋ #E6EAF2 の線＋淡い影。くすんだベージュ・灰を排除 */
+:root {
+  --c-blue: #2F6BFF; --c-blue2: #22B8F0; --c-blue-l: #EEF4FF;
+  --c-green: #12B886; --c-green2: #5FD38D; --c-green-l: #E9FAF3;
+  --c-orange: #FF7A1A; --c-orange2: #FFB020; --c-orange-l: #FFF3E6;
+  --g-brand: linear-gradient(135deg, #705EE2 0%, #8F7CFF 100%);
+  --g-blue: linear-gradient(135deg, #2F6BFF 0%, #22B8F0 100%);
+  --sub: #5B6478; --line: #E6EAF2;
+}
+/* 画像：くすみを取る（明るさ・彩度を少し上げる） */
+.hr img, .flr .img img { filter: brightness(1.04) saturate(1.12) contrast(1.02); }
+
+/* Hero 背景：紫→空色の淡グラデ（表面は画像側をわずかに暖色で受ける） */
+section.page:first-of-type .hero { background: linear-gradient(110deg, #F1EEFF 0%, #EDF3FF 52%, #FDF3EA 100%); }
+section.page:nth-of-type(2) .hero { background: linear-gradient(110deg, #F1EEFF 0%, #EDF3FF 60%, #E9F7FF 100%); }
+section.page:first-of-type .lead, section.page:nth-of-type(2) .lead { color: #4B5568; }
+
+/* 表面：お悩みカード（橙アクセントを新パレットに） */
+section.page:first-of-type .pc { background: #FFF6EE; }
+section.page:first-of-type .pc .w { color: var(--c-orange); }
+section.page:first-of-type .pc img { border-color: #FFE0C7; }
+.bridge i { color: var(--c-blue); }
+
+/* 番号丸・アイコンはグラデに */
+.fc .no, .fsteps .fs .n { background: var(--g-brand); }
+.fr .fc li::before { color: #705EE2; }
+.fx .og .oi { background: var(--g-brand); }
+.cg .fic { background: var(--g-blue); }
+.go .ext .ei { background: linear-gradient(135deg, #FFC52E 0%, #FFB020 100%); }
+
+/* 独自機能の帯：紫→青の淡グラデ */
+.fx .orig { background: linear-gradient(120deg, #E9E4FF 0%, #E2EBFF 100%); }
+.fx .og div { border-color: #D6DEFA; }
+.fx .sg i { background: #F1EEFF; }
+
+/* 裏面ヒーローの診断画面：タイル色を新パレットに */
+.dscr .pd span:nth-child(2) { background: var(--c-green-l); } .dscr .pd span:nth-child(2) svg { stroke: var(--c-green); }
+.dscr .pd span:nth-child(3) { background: var(--c-orange-l); } .dscr .pd span:nth-child(3) svg { stroke: var(--c-orange); }
+.dscr .pd span:nth-child(4) { background: var(--c-blue-l); } .dscr .pd span:nth-child(4) svg { stroke: var(--c-blue); }
+.dscr .pd span:nth-child(5) { background: #FFF6DB; } .dscr .pd span:nth-child(5) svg { stroke: var(--c-orange2); }
+.dscr .rt { background: var(--g-brand); }
+
+/* 導入期間の矢羽根 */
+section.page:nth-of-type(2) .gl div:nth-of-type(1) { background: var(--c-blue-l); }
+section.page:nth-of-type(2) .gl div:nth-of-type(2) { background: var(--c-green-l); }
+section.page:nth-of-type(2) .gl div:nth-of-type(3) { background: var(--g-brand); }
+.gl div:nth-of-type(1) b small { color: var(--c-blue); }
+.gl div:nth-of-type(2) b small { color: var(--c-green); }
+.go .ext { background: #FFF8E6; }
+
+/* フッター帯：紫グラデ */
+.ft { background: linear-gradient(90deg, #705EE2 0%, #6C7BFF 100%); }
+/* 2026-10-26 表面 Hero 画像の明度・コントラストを裏面 4 コマに合わせる（画像側で調整した _tone 版を使用、CSS フィルタは解除） */
+.hr img, .flr .img img { filter: none; }
+/* 2026-10-26 表面 Hero：画像（52% 以降）の手前で暖色に切り替え、画像の縁色（#F5E1C3 系）で受ける */
+section.page:first-of-type .hero { background: linear-gradient(90deg, #F1EEFF 0%, #F5F0F7 28%, #FCF0DE 48%, #FAE8CB 72%, #F7E0BD 100%); }
+</style>
+</head>
+<body>
+
+<!-- ===== 表面：AI 電話 ===== -->
+<section class="page">
+  <header class="hd"><img src="flyer_assets/logo_support.png" alt="GBase Support"></header>
+
+  <div class="hero">
+    <div class="hl">
+      <span class="pill">商業施設・ホテルの代表電話に</span>
+      <h1>“取次だけ”から始める、<br><span>AI の電話受付。</span></h1>
+      <p class="lead">Web・LINE・店頭で使っているナレッジが、そのまま電話に。一次対応から、用件を判断した取次まで自動化。任せる範囲は段階的に広げられ、いつでも戻せます。</p>
+   </div>
+    <div class="hr">
+      <img src="flyer_assets/phone_scene_soft_tone.png" alt="来館者の電話を AI が受け、必要なときは館内の担当者へつなぐ利用イメージ">
+      <p class="cap">利用イメージ：定型の案内は AI、判断が必要な相談は担当者へ</p>
+    </div>
+  </div>
+
+  <div class="sec pain">
+    <h2>電話対応に、<span>こんなお悩み</span>はありませんか？</h2>
+    <div class="pr">
+      <div class="pc"><img src="flyer_assets/pain-transfer.webp" alt=""><div><div class="w">商業施設・百貨店の代表電話</div><div class="t">「担当は誰か」の判断と<br>取次に時間がかかる</div><p>用件を聞き取り、部署・店舗を判断して転送するだけで手が止まる。</p></div></div>
+      <div class="pc"><img src="flyer_assets/pain-repeat.webp" alt=""><div><div class="w">問い合わせ窓口</div><div class="t">同じ質問の繰り返しで、<br>手が回らない</div><p>FAQ で済む用件に時間を取られ、複雑な相談の対応品質に響く。</p></div></div>
+      <div class="pc"><img src="flyer_assets/pain-hotel.webp" alt=""><div><div class="w">ホテル・宿泊</div><div class="t">夜間・繁忙期に、<br>電話がつながらない</div><p>定型の質問が多いのに、24 時間の人手対応は難しい。</p></div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <p class="bridge"><i>↓</i>これらの悩みを、<span>AI 電話受付・取次</span>が解決<i>↓</i></p>
+    <div class="fr">
+      <div class="fc"><div class="hd2"><span class="no">1</span><h3>用件を聞き取り、<br>担当へ自動で取次</h3></div>
+        <ul><li>取次ルールは自然な文章で登録</li><li>担当・部署の直通番号へ転送</li><li>転送前に「担当におつなぎします」</li></ul></div>
+      <div class="fc"><div class="hd2"><span class="no">2</span><h3>定型は AI、<br>複雑な用件は人へ</h3></div>
+        <ul><li>営業時間・料金・アクセスは AI が回答</li><li>チャットボットと共通のナレッジ</li><li>クレーム・決済・本人確認は必ず人へ</li></ul></div>
+      <div class="fc"><div class="hd2"><span class="no">3</span><h3>24 時間、<br>電話を取りこぼさない</h3></div>
+        <ul><li>夜間・繁忙期も AI が一次受付</li><li>転送先が出られないときは自動で案内</li><li>10 言語以上の音声対話に対応</li></ul></div>
+    </div>
+
+    <div class="fx">
+      <div class="orig">
+        <h4>GBase Support<br>独自の機能</h4>
+        <div class="og">
+          <div><i class="oi"><svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></i><p><b>応答スタイル 3 段階</b><span>AI が答える範囲をスライダーで調整</span></p></div>
+          <div><i class="oi"><svg viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19a4 4 0 0 1-4 3h-2"/></svg></i><p><b>AI コパイロット</b><span>有人通話を文字起こし、回答候補を提示</span></p></div>
+          <div><i class="oi"><svg viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M7 16v-4M12 16V8M17 16v-7"/><path d="M5 9l5-4 4 3 5-4"/></svg></i><p><b>通話コスト可視化</b><span>通話ごとの AI コストを自動で表示</span></p></div>
+        </div>
+      </div>
+      <div class="std">
+        <h4>標準機能</h4>
+        <div class="sg">
+          <span><i><svg viewBox="0 0 24 24"><path d="M12 3v18M8 7v10M4 10v4M16 6v12M20 9v6"/></svg></i><b>AI 音声</b>24 時間一次対応</span>
+          <span><i><svg viewBox="0 0 24 24"><path d="M4 12h6l3-6M13 18l-3-6M14 6h6M14 18h6"/></svg></i><b>意図理解</b>で振り分け</span>
+          <span><i><svg viewBox="0 0 24 24"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"/></svg></i><b>音声エンジン</b>10 種以上</span>
+          <span><i><svg viewBox="0 0 24 24"><path d="M9 14l-5-5 5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg></i><b>フォールバック</b>案内</span>
+          <span><i><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></i><b>予約連携</b>カレンダー</span>
+          <span><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></i><b>録音同意</b>フロー</span>
+          <span><i><svg viewBox="0 0 24 24"><path d="M4 4v16h16"/><path d="M8 14l3-3 3 2 5-5"/></svg></i><b>通話ログ</b>で傾向分析</span>
+          <span><i><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4-3 7.5-7 9-4-1.5-7-5-7-9V6z"/><path d="M12 9v4M12 16v.5"/></svg></i><b>安全弁</b>重要用件は人へ</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kv">
+      <h2>導入効果の<span>目安</span></h2>
+      <div class="kg">
+        <div class="kc">
+          <div class="kh"><b class="en">70〜90<small>%</small></b><span>定型の問い合わせを AI が自動処理</span></div>
+          <div class="stk"><i class="ai"></i><i class="rg"></i><i class="hu"></i></div>
+          <div class="lg"><span><em class="d1"></em>AI が自動処理</span><span><em class="d2"></em>人が対応</span></div>
+        </div>
+        <div class="kc">
+          <div class="kh"><b class="en">50〜70<small>%</small></b><span>電話対応の人員配置を削減</span></div>
+          <div class="bars2">
+            <div class="col"><div class="b0"></div><small>導入前</small></div>
+            <div class="col"><div class="b1"><i></i></div><small>導入後</small></div>
+            <div class="dn">▼ 50〜70%</div>
+          </div>
+        </div>
+        <div class="kc">
+          <div class="kh"><b class="en">24<small>時間</small>365<small>日</small></b><span>夜間・繁忙期も取りこぼさない</span></div>
+          <div class="tl">
+            <div class="row"><em>有人</em><div class="tr"><i class="st"></i></div></div>
+            <div class="row"><em>AI</em><div class="tr"><i class="al"></i></div></div>
+            <div class="ax"><span>0時</span><span>6</span><span>12</span><span>18</span><span>24時</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="kn">※ 数値は想定される導入効果の目安です。業種・コール内容・運用条件により異なります。図は目安を示すイメージです。</p>
+    </div>
+  </div>
+
+
+  <div class="demo">
+    <div>
+      <div class="l1">いますぐ、AI の電話応対を体験できます</div>
+      <div class="tel"><small>デモ電話</small>050-1785-7077</div>
+      <p class="s">ホテル受付を例にしたデモ回線です。24 時間受付・通話料はお客様のご負担となります</p>
+    </div>
+    <div class="qa">
+      <div class="h">▼ 話しかけてみてください</div>
+      <span>「大浴場は何時まで入れますか？」</span>
+      <span>「朝食は何時からですか？」</span>
+      <span>「担当の方とお話ししたいです」</span>
+      <span>「Do you speak English?」</span>
+    </div>
+    <div class="qr"><img src="flyer_assets/qr_aiphone.png" alt="AI 電話の詳細ページ"><p>詳しい機能はこちら</p></div>
+  </div>
+  <footer class="ft"><span class="c">Web・LINE・店頭・電話を、ひとつのナレッジで受け持つ AI コンシェルジュ</span><span class="u">gbase.ai/support<small>Sparticle株式会社</small></span></footer>
+</section>
+
+<!-- ===== 裏面：AI お店選び ===== -->
+<section class="page">
+  <header class="hd"><img src="flyer_assets/logo_support.png" alt="GBase Support"></header>
+
+  <div class="hero">
+    <div class="hl">
+      <span class="pill">商業施設・ショッピングモール向け</span>
+      <h1>占い・診断で、<br><span>まだ知らないお店へ。</span></h1>
+      <p class="lead">3 つの質問に答えるだけ。AI が会話で気分をたずね、今日のタイプとおすすめの商品・お店をご提案します。行き先が決まっていない来館者も、気になったお店までそのままご案内できます。</p>
+    </div>
+    <div class="hr">
+      <div class="dmock">
+        <div class="dscr">
+          <div class="bar">診断 <b>1</b> / 3</div>
+          <div class="ai"><i>AI</i>今日のお出かけ、どんな気分ですか？</div>
+          <div class="op">ちょっと自分にごほうび</div>
+          <div class="op on">誰かにプレゼントを探したい</div>
+          <div class="op">のんびり過ごしたい</div>
+          <div class="op">新しいものに出会いたい</div>
+          <div class="re">いいですね。贈る相手を思いうかべて、次の質問へ。</div>
+        </div>
+        <div class="dscr res">
+          <div class="bar">診断結果</div>
+          <div class="ty"><small>今日のあなたは</small>「贈りもの」タイプ</div>
+          <div class="pd"><span><svg viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="1"/><path d="M3 9h18M12 9v11M12 9c-2-4-6-4-6-1.5S10 9 12 9c2 0 6-.5 6-2.5S14 5 12 9"/></svg></span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="2.5"/><path d="M12 7.5c0-3 3-4 3-1.5M12 7.5c0-3-3-4-3-1.5M14.5 10c3 0 4 3 1.5 3M9.5 10c-3 0-4 3-1.5 3M12 12.5V21M12 18c-2-2-4-1.5-4-1.5"/></svg></span><span><svg viewBox="0 0 24 24"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3v3M11 3v3"/></svg></span><span><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span><span><svg viewBox="0 0 24 24"><path d="M12 3l2.3 5.2 5.7.5-4.3 3.8 1.3 5.6L12 15.2 7 18.1l1.3-5.6L4 8.7l5.7-.5z"/></svg></span><span class="more">ほかの<br>候補 ›</span></div>
+          <div class="pdc">おすすめ 5 品（すべて別のお店）</div>
+          <div class="rt">ルートを見る ›</div>
+        </div>
+      </div>
+      <p class="cap">画面イメージ（企画例）。質問・タイプ・デザインは施設ごとに作成します</p>
+    </div>
+  </div>
+
+  <div class="sec flow">
+    <h2>行き先が決まっていない来館者を、<span>診断からお店へ</span></h2>
+    <div class="flr">
+      <div class="img"><span class="cm"><img src="flyer_assets/uranai_scene.png" alt="案内板の QR から診断を始め、おすすめの商品を選んでお店で受け取る 4 コマ"><i class="v"></i><i class="h"></i></span><p class="cap">利用イメージです（架空の施設）。左上 → 右上 → 左下 → 右下の順</p></div>
+      <div class="fsteps">
+        <div class="fs q"><span class="n">1</span><div><b>入口で「診断」を選ぶ</b><span>案内板の QR・NFC から開始</span><em>行き先が決まっている方は、店舗検索からそのまま案内</em></div></div>
+      <div class="fs"><span class="n">2</span><div><b>3 つの質問に答える</b><span>AI がひとことずつ返事</span><em>会話しているような感覚で、楽しく進む</em></div></div>
+      <div class="fs"><span class="n">3</span><div><b>タイプとおすすめ 5 品</b><span>占いの演出も組み込める</span><em>誕生月・星座などで「今日のあなた」を演出</em></div></div>
+      <div class="fs"><span class="n">4</span><div><b>選んだお店へルート案内</b><span>店舗詳細からフロア・道順へ</span><em>見て終わらず、来店につなげる</em></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec can">
+    <h2>集客から回遊まで、診断で期待できること</h2>
+    <div class="cg">
+      <div class="fc"><i class="fic"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z"/><path d="M18 15l.9 2.1L21 18l-2.1.9L18 21l-.9-2.1L15 18l2.1-.9z"/></svg></i><p><b>来館のきっかけづくり</b><span>占い・診断の話題性で、「ちょっと寄ってみよう」という来館動機を創出</span></p></div>
+      <div class="fc"><i class="fic"><svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8.2 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.8"/></svg></i><p><b>まだ知らないお店へ回遊</b><span>目的の店以外にも足を運ぶ導線。結果から店舗詳細・ルート案内へ</span></p></div>
+      <div class="fc"><i class="fic"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/><path d="M12 13l.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2-1.45-1.4 2-.3z"/></svg></i><p><b>季節・イベントの販促に</b><span>クリスマス・周年祭など、企画に合わせて診断を作成</span></p></div>
+      <div class="fc"><i class="fic"><svg viewBox="0 0 24 24"><path d="M12 4v16M6 20h12M5 7h14"/><path d="M5 7l-3 6a3 3 0 0 0 6 0z"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z"/></svg></i><p><b>店舗へバランスよく送客</b><span>表示回数を店舗ごとに均等化。テナントにも説明しやすい公平な仕組み</span></p></div>
+      <div class="fc"><i class="fic"><svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 4v4h4"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 20v-4h-4"/></svg></i><p><b>何度来ても新しい発見</b><span>質問や結果が季節ごとに変わり、リピーターにも新鮮さ。滞在時間の延長につなげる</span></p></div>
+      <div class="fc"><i class="fic"><svg viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M7 16v-4M12 16V8M17 16v-7"/></svg></i><p><b>効果をデータで確認</b><span>表示回数・タップ数を店舗別に集計。テナントへの報告にも活用</span></p></div>
+    </div>
+    <p class="cnote">※ 企画例です。効果は施設・企画内容により異なります。表示ルール・レポート項目は施設ごとにご相談のうえ設計します。</p>
+  </div>
+
+  <div class="sec">
+    <div class="go">
+      <div class="gs">
+        <h2>最短 <span>3〜4 週間</span>で運用開始</h2>
+        <div class="gl">
+          <div><b>ヒアリング<small>1 週間</small></b><span>課題・言語・連携先を確認</span></div>
+          <i>▶</i>
+          <div><b>設定・構築<small>2〜3 週間</small></b><span>FAQ・システム連携・端末設置</span></div>
+          <i>▶</i>
+          <div><b>運用開始</b><span>データで回答精度を継続改善</span></div>
+        </div>
+        <p class="cnote">※ 館内 AI 案内の標準構成の場合。診断の企画・制作期間は別途ご相談</p>
+      </div>
+      <p class="ext"><i class="ei"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/><path d="M12 7v3M10.5 8.5h3" /></svg></i><span class="et"><b>診断の企画からご相談ください</b>質問・タイプ・結果のことばの設計、商品データの集め方、テナントへの説明資料まで、施設の運営に合わせてご提案します。</span></p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="box"><img src="flyer_assets/qr_contact.png" alt="お問い合わせページ"><div><div class="h">ご相談・資料請求・デモはこちら</div><div class="u">gbase.ai/support</div></div></div>
+    <div class="co">
+      <div class="nm">Sparticle株式会社</div>
+      <p>〒103-0001 東京都中央区日本橋小伝馬町6-12<br>日本橋森ビル 3F<br>TEL 03-3527-2828（AI 自動応答 試験運用中）</p>
+    </div>
+  </div>
+  <p class="tm">※ 画面・イラストは利用イメージです。記載の会社名・製品名は各社の商標または登録商標です。</p>
+</section>
+
+</body>
+</html>
