@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>チラシ_車載エッジAI_GBase_A4両面_v0.5</title>
+<style>
+@page { size: 210mm 297mm; margin: 0; }
+:root{
+  --navy:#091333; --panel:#101d48; --edge:#26346b;
+  --green:#12d599; --cyan:#2fd0f2; --blue:#1f4aff; --blue-l:#6f97ff;
+  --ink:#0a1433; --body:#3e4659; --mute:#6b7183; --tint:#f1f5fa; --line:#d9deeb;
+  --on:#c9d2ea; --on-dim:#8f9bbd;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html,body{ background:#8a8f9c; }
+body{ font-family:"Noto Sans JP","Noto Sans CJK JP","Yu Gothic",sans-serif; color:var(--ink); font-size:9pt; line-height:1.6;
+  -webkit-print-color-adjust:exact; print-color-adjust:exact; font-feature-settings:"palt"; }
+.page{ width:210mm; height:297mm; background:#fff; position:relative; overflow:hidden; margin:6mm auto; display:flex; flex-direction:column; page-break-after:always; }
+@media print{ html,body{ background:#fff; } .page{ margin:0; } }
+b,strong{ font-weight:700; }
+svg{ display:block; } img{ display:block; }
+
+/* ---------- Hero（両面共通） ---------- */
+.hero{ position:relative; background:var(--navy); color:#fff; padding:9mm 16mm 0; flex:none; overflow:hidden; }
+.hero .bg{ position:absolute; left:-3mm; top:-3mm; width:216mm; max-width:none; }
+.hero > *:not(.bg){ position:relative; }
+.logo{ display:inline-flex; align-items:center; background:#fff; border-radius:2mm; padding:2.2mm 3.4mm; }
+.logo img{ height:5.2mm; }
+.pill{ display:inline-block; background:var(--green); color:var(--navy); font-weight:700; font-size:8.6pt; padding:.9mm 2.8mm; border-radius:1mm; }
+.hero h1{ font-weight:800; letter-spacing:.01em; }
+.hero h1 em{ font-style:normal; color:var(--green); }
+.hero .lead{ color:var(--on); }
+
+/* ---------- 見出し ---------- */
+.sec{ padding-left:16mm; padding-right:16mm; flex:none; }
+.sec h2{ font-size:15pt; font-weight:800; line-height:1.3; display:flex; align-items:center; gap:2.6mm; }
+.sec h2::before{ content:""; width:1.4mm; height:5.6mm; border-radius:.7mm; flex:none; background:linear-gradient(180deg,var(--green),var(--blue)); }
+.sec h2 .dash{ font-weight:400; letter-spacing:-.1em; }
+ul.dots{ list-style:none; }
+ul.dots li{ position:relative; padding-left:4mm; }
+ul.dots li + li{ margin-top:1.2mm; }
+ul.dots li::before{ content:""; position:absolute; left:.3mm; top:.6em; width:1.5mm; height:1.5mm; border-radius:50%; background:var(--c,var(--green)); }
+
+/* ====================== 表面（全面ダーク） ====================== */
+.front{ background:var(--navy); color:var(--on); }
+.front b{ color:#fff; }
+.front .hero{ height:89mm; }
+.front .hero .pill{ margin-top:8mm; }
+.front .hero h1{ font-size:28pt; line-height:1.32; margin-top:4mm; }
+.front .hero .lead{ font-size:10pt; line-height:1.75; margin-top:4.5mm; }
+.front h2{ color:#fff; } .front h2 .dash{ color:var(--edge); }
+
+.s0{ padding-top:5.5mm; padding-bottom:5.5mm; }
+.cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:4mm; margin-top:4mm; }
+.card{ background:var(--panel); border:.3mm solid var(--edge); border-radius:3mm; overflow:hidden; }
+.card > img{ width:100%; height:24.6mm; object-fit:cover; border-bottom:.5mm solid var(--c); }
+.card .in{ padding:3mm 4mm 3.8mm; }
+.card .kw{ font-size:8.2pt; font-weight:800; color:var(--c); line-height:1.3; letter-spacing:.06em; }
+.card h3{ font-size:11.5pt; font-weight:800; line-height:1.35; color:#fff; white-space:nowrap; }
+.card ul{ margin-top:2.4mm; font-size:8.6pt; line-height:1.5; }
+.card.c1{ --c:var(--green); } .card.c2{ --c:var(--blue-l); } .card.c3{ --c:var(--cyan); }
+
+.band{ padding-top:1mm; padding-bottom:5.5mm; flex:1; }
+.band .top{ display:flex; align-items:center; gap:4mm; height:27mm; }
+.band .top .tx{ flex:none; width:100mm; }
+.band .top .sub{ font-size:8.4pt; line-height:1.6; margin-top:1.6mm; }
+.band .top img{ flex:1; min-width:0; height:27mm; object-fit:contain; object-position:right center; }
+.steps{ display:grid; grid-template-columns:repeat(6,1fr); gap:4.4mm; margin-top:2.6mm; }
+.step{ position:relative; background:var(--panel); border:.3mm solid var(--edge); border-radius:2mm; text-align:center; padding:1.6mm 1mm 2mm; }
+.step .n{ font-size:7.6pt; font-weight:800; color:var(--cyan); line-height:1.2; }
+.step .t{ font-size:10pt; font-weight:800; line-height:1.4; color:#fff; }
+.step .d{ font-size:7.6pt; line-height:1.4; margin-top:.3mm; color:var(--on); }
+.step.on{ background:var(--green); border-color:var(--green); }
+.step.on .n, .step.on .t{ color:var(--navy); } .step.on .d{ color:#0b3a35; font-weight:500; }
+.step:not(:last-child)::after{ content:""; position:absolute; right:-3.1mm; top:50%; width:1.7mm; height:1.7mm; border-top:.5mm solid var(--cyan); border-right:.5mm solid var(--cyan); transform:translateY(-50%) rotate(45deg); }
+.proof{ display:grid; grid-template-columns:1fr 72mm; gap:4.4mm; margin-top:4mm; }
+.proof .box{ background:var(--panel); border:.3mm solid var(--edge); border-radius:3mm; padding:3.8mm 4.6mm 4mm; display:flex; flex-direction:column; justify-content:center; }
+.proof .tag{ font-size:8.2pt; font-weight:800; color:var(--green); letter-spacing:.04em; }
+.proof h3{ font-size:11.5pt; font-weight:800; line-height:1.4; margin-top:.6mm; color:#fff; }
+.proof ul{ margin-top:2.2mm; font-size:8.8pt; line-height:1.5; }
+.stats{ background:linear-gradient(135deg,#2552ff 0%,#12319f 100%); border-radius:3mm; padding:.6mm 4.6mm; display:flex; flex-direction:column; justify-content:center; }
+.stat{ display:flex; align-items:center; gap:3mm; padding:2.3mm 0; }
+.stat + .stat{ border-top:.25mm solid #4a6cf0; }
+.stat .v{ flex:none; width:28mm; color:#fff; font-weight:800; font-size:9.4pt; line-height:1; white-space:nowrap; }
+.stat .v big{ font-size:17pt; letter-spacing:-.01em; color:#7dffd6; }
+.stat .v.iso{ font-size:9.6pt; line-height:1.35; }
+.stat .l{ color:#dfe6ff; font-size:8.2pt; line-height:1.4; white-space:nowrap; }
+.strip{ background:linear-gradient(90deg,var(--green),var(--cyan)); color:var(--navy); height:13mm; padding:0 16mm; display:flex; align-items:center; font-size:8.6pt; flex:none; font-weight:500; }
+.strip b{ color:var(--navy); font-weight:800; } .strip .sep{ width:.3mm; height:3.6mm; background:var(--navy); margin:0 4mm; }
+.strip .next{ margin-left:auto; font-weight:800; }
+
+/* ====================== 裏面 ====================== */
+.back .hero{ height:70mm; }
+.back .hero h1{ font-size:22pt; line-height:1.42; margin-top:5.5mm; }
+.back .hero .lead{ font-size:9.6pt; line-height:1.75; margin-top:3.6mm; }
+.back .sec h2{ font-size:13.5pt; }
+.back .sec h2::before{ height:5.2mm; }
+
+/* 製品 3 枚：各製品のブランド色 */
+.s1{ padding-top:6.5mm; padding-bottom:6.5mm; }
+.prods{ display:grid; grid-template-columns:repeat(3,1fr); gap:4mm; margin-top:3.4mm; }
+.prod{ border:.3mm solid var(--line); border-radius:3mm; overflow:hidden; display:flex; flex-direction:column; background:#fff; }
+.prod .ph{ background:var(--c); padding:2.4mm 3.6mm 2.4mm; color:#fff; }
+.prod h3{ font-size:12.5pt; font-weight:800; line-height:1.3; }
+.prod .ps{ font-size:8.2pt; font-weight:700; line-height:1.4; }
+.prod ul{ padding:3mm 3.6mm 0; font-size:8.4pt; line-height:1.5; flex:1; color:var(--body); white-space:nowrap; }
+.prod ul b{ color:var(--ink); }
+.prod .res{ margin:3mm 3.6mm 3.6mm; background:var(--navy); border-radius:2mm; padding:2.2mm 3.2mm; height:17.5mm; border-left:1.2mm solid var(--c); }
+.res .v{ color:var(--cl); font-weight:800; font-size:13pt; line-height:1.3; }
+.res .v small{ font-size:9pt; }
+.res .l{ color:var(--on); font-size:7.6pt; line-height:1.45; }
+.prod.onprem{ --c:#0a9a74; --cl:#5ff0c4; }  /* Hero のエメラルドに寄せた（公式 #9BA832 オリーブは不採用） */
+.prod.know{ --c:#1f4aff; --cl:#9db8ff; }  /* 紫をやめ、表面「蒸留」と同じブルーに */
+.prod.supp{ --c:#705ee2; --cl:#cdc5ff; }
+
+/* 自動車業界での使い方：ダーク帯＋配図 */
+.s2{ background:var(--navy); color:var(--on); padding-top:5.5mm; padding-bottom:5.5mm; display:flex; align-items:center; gap:5mm; }
+.s2 h2{ color:#fff; }
+.s2 .tx{ flex:1; min-width:0; }
+.s2 > img{ flex:none; width:54mm; }
+table.use{ width:100%; border-collapse:collapse; margin-top:2.6mm; font-size:8.5pt; }
+table.use th{ text-align:left; font-weight:700; font-size:7.8pt; color:var(--cyan); padding:.8mm 0 1mm; border-bottom:.3mm solid var(--edge); letter-spacing:.04em; }
+table.use td{ padding:1.55mm 0; border-bottom:.3mm solid var(--edge); vertical-align:middle; white-space:nowrap; }
+table.use tr:last-child td{ border-bottom:0; }
+table.use td:first-child{ font-weight:800; color:#fff; width:36mm; }
+table.use td:first-child::before{ content:""; display:inline-block; width:1.5mm; height:1.5mm; border-radius:50%; background:var(--green); margin-right:2mm; vertical-align:.1em; }
+
+/* チーム */
+.s3{ padding-top:6mm; }
+.team{ display:grid; grid-template-columns:repeat(4,1fr); gap:3mm; margin-top:3mm; }
+.team div{ background:var(--tint); border-radius:2.4mm; padding:2.6mm 3mm 2.8mm; border-top:.8mm solid var(--c); }
+.team div:nth-child(1){ --c:#1f4aff; } .team div:nth-child(2){ --c:#1c86e8; } .team div:nth-child(3){ --c:#19b5c9; } .team div:nth-child(4){ --c:#12d599; }
+.team b{ display:block; font-size:10pt; font-weight:800; line-height:1.4; color:var(--ink); white-space:nowrap; }
+.team span{ display:block; font-size:7.8pt; color:var(--body); line-height:1.5; margin-top:.3mm; }
+.note{ font-size:7.5pt; color:var(--mute); line-height:1.5; padding:0 16mm; margin-top:auto; margin-bottom:3.2mm; }
+
+/* フッター */
+.foot{ background:var(--navy); color:#fff; padding:6mm 16mm 6.5mm; display:flex; align-items:center; gap:8mm; flex:none; }
+.cta{ background:#fff; border-radius:3mm; padding:2.6mm 5mm 2.6mm 2.6mm; display:flex; align-items:center; gap:4mm; width:96mm; flex:none; }
+.cta img{ width:21mm; height:21mm; }
+.cta .c1{ font-size:10pt; font-weight:800; color:var(--ink); line-height:1.4; }
+.cta .c2{ font-size:15pt; font-weight:800; color:var(--blue); line-height:1.35; letter-spacing:.01em; }
+.cta .c3{ font-size:7.9pt; color:var(--body); line-height:1.45; margin-top:.4mm; }
+.corp .logo{ padding:1.6mm 2.6mm; border-radius:1.6mm; } .corp .logo img{ height:4mm; }
+.corp p{ font-size:8.2pt; color:var(--on); line-height:1.6; margin-top:2mm; }
+.corp .tags{ display:flex; gap:1.6mm; margin-top:2.2mm; }
+.corp .tags span{ border:.3mm solid var(--green); color:var(--green); font-weight:700; font-size:7.6pt; border-radius:10mm; padding:.1mm 2.4mm; line-height:1.6; white-space:nowrap; }
+
+/* ===== 実測調整：表 +7.8mm / 裏 +5.8mm を解消 ===== */
+.front .hero{ height:87mm; }
+.card > img{ height:23.6mm; }
+.band .top{ height:23mm; } .band .top .tx{ width:114mm; } .band .top img{ height:23mm; }
+.band h2{ white-space:nowrap; font-size:14.5pt; }
+.steps{ margin-top:2mm; }
+.stat{ padding:1.85mm 0; }
+.proof{ margin-top:3.6mm; }
+.back .hero{ height:68mm; padding-top:8.5mm; }
+.s1{ padding-top:5.5mm; padding-bottom:5.5mm; }
+.prod .res{ height:16.8mm; }
+.s2{ padding-top:4.5mm; padding-bottom:4.5mm; } .s2 > img{ width:50mm; }
+table.use td{ padding:1.35mm 0; } table.use td:first-child{ width:41mm; }
+.s3{ padding-top:5.5mm; }
+.foot{ padding:5.5mm 16mm 6mm; }
+
+/* ===== 表面の本文を白地に戻す（全面ベタは印刷で不利）。Hero・配図・差し色は維持 ===== */
+.front{ background:#fff; color:var(--body); }
+.front b{ color:var(--ink); }
+.front h2{ color:var(--ink); } .front h2 .dash{ color:var(--line); }
+.card{ background:var(--tint); border-color:var(--line); }
+.card > img{ border-bottom:.7mm solid var(--c); }
+.card h3{ color:var(--ink); }
+.card.c1{ --c:#0fb586; } .card.c2{ --c:#1f4aff; } .card.c3{ --c:#12a5cc; }
+.band{ background:var(--tint); padding-top:4.5mm; }
+.band .top{ height:21mm; }
+.band .top img{ flex:none; width:60mm; height:21mm; object-fit:cover; border-radius:2.4mm; margin-left:auto; }
+.band .top .tx{ width:auto; flex:1; }
+.step{ background:#fff; border-color:var(--line); }
+.step .n{ color:var(--blue); } .step .t{ color:var(--ink); } .step .d{ color:var(--body); }
+.step.on{ background:var(--navy); border-color:var(--navy); }
+.step.on .n{ color:var(--green); } .step.on .t{ color:#fff; } .step.on .d{ color:var(--on); font-weight:400; }
+.step:not(:last-child)::after{ border-color:var(--blue); }
+.proof .box{ background:#fff; border-color:var(--line); }
+.proof .tag{ color:#0a9a6e; } .proof h3{ color:var(--ink); }
+.front .hero{ height:88mm; }
+
+/* 帯の右側イラストを撤去 → 空いた約 9mm を上下の余白と配図に配分 */
+.band .top{ height:auto; display:block; }
+.band .top .sub{ margin-top:1.2mm; }
+.band{ padding-top:6.5mm; padding-bottom:6.5mm; }
+.steps{ margin-top:3.6mm; } .proof{ margin-top:4mm; }
+.stat{ padding:2.2mm 0; }
+.s0{ padding-top:6.5mm; padding-bottom:6.5mm; }
+.card > img{ height:24.6mm; }
+.front .hero{ height:89mm; }
+.front .hero{ height:88mm; } .s0{ padding-top:6mm; padding-bottom:6mm; }
+/* 蒸留＝ブルー、量子化＝エメラルドで色分け */
+.step.on.k3{ background:#1f4aff; border-color:#1f4aff; }
+.step.on.k4{ background:#0a9a74; border-color:#0a9a74; }
+.step.on .n{ color:#fff; opacity:1; } .step.on .d{ color:#fff; }
+.band{ padding-bottom:6.2mm; }
+
+/* Hero ロゴ：gbase.ai のロックアップ（マーク＋GBase＋シリーズ）を白版で両面共通に */
+.glogo{ display:inline-flex; align-items:center; gap:2.2mm; font-family:"Inter","Noto Sans JP",sans-serif; font-weight:800; font-size:17pt; line-height:1; color:#fff; height:9.6mm; letter-spacing:0; }
+.glogo img{ height:8mm; width:auto; }
+.glogo .ser{ font-weight:600; font-size:.82em; color:var(--on); margin-left:.6mm; }
+
+/* 実績：31B の数字パネルを廃止 → 実績カードを全幅に、下に ✓ カード 3 枚（裏面チームのカードと同じ様式） */
+.proof{ display:block; margin-top:3.6mm; }
+.proof .box{ padding:3.2mm 4.6mm 3.4mm; display:block; }
+.proof ul{ margin-top:1.6mm; }
+.checks{ display:grid; grid-template-columns:repeat(3,1fr); gap:3mm; margin-top:3mm; }
+.checks > div{ background:#fff; border-radius:2.4mm; padding:2.4mm 3mm 2.6mm; border-top:.8mm solid var(--c); display:flex; align-items:center; gap:2.4mm; }
+.checks > div:nth-child(1){ --c:#1f4aff; } .checks > div:nth-child(2){ --c:#19b5c9; } .checks > div:nth-child(3){ --c:#12d599; }
+.checks i{ flex:none; width:6mm; height:6mm; border-radius:50%; background:var(--c); display:flex; align-items:center; justify-content:center; }
+.checks i svg{ width:4mm; height:4mm; fill:none; stroke:#fff; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+.checks b{ display:block; font-size:10pt; font-weight:800; line-height:1.4; color:var(--ink); white-space:nowrap; }
+.checks span{ display:block; font-size:7.8pt; color:var(--body); line-height:1.45; }
+
+/* Hero ロゴを 50% に縮小、浮いた分は Hero 高さを詰めて本文側へ */
+.glogo{ font-size:8.5pt; height:4.8mm; gap:1.2mm; } .glogo img{ height:4mm; } .glogo .ser{ margin-left:.3mm; }
+.front .hero{ height:85mm; } .back .hero{ height:65mm; }
+.checks{ margin-top:3.4mm; } .proof{ margin-top:4mm; }
+
+/* 実績カード右側に配図（大きなモデル → 小さなチップ）。ネイビー面をカード右端まで敷く */
+.proof .box{ display:flex; padding:0; overflow:hidden; align-items:stretch; }
+.proof .box .tx{ flex:1; min-width:0; padding:3.2mm 0 3.4mm 4.6mm; }
+.proof .box .art{ flex:none; width:55mm; background:var(--navy); display:flex; align-items:center; justify-content:center; }
+.proof .box .art img{ width:100%; height:auto; }
+.proof .box{ flex-direction:row; }
+/* ロゴを 20% 拡大（50% → 60%）。増えた 1mm は直下の余白から引く */
+.glogo{ font-size:10.2pt; height:5.8mm; gap:1.4mm; } .glogo img{ height:4.8mm; }
+.front .hero .pill{ margin-top:7mm; } .back .hero h1{ margin-top:4.5mm; }
+
+/* リード 2 行化で Hero を 5mm 詰め、本文の余白と配図へ回す。実績カードの配図は本文が折り返さない幅に */
+.front .hero{ height:80mm; }
+.proof .box .art{ width:46mm; }
+.card > img{ height:26mm; }
+.s0{ padding-top:6.5mm; padding-bottom:6.5mm; }
+.band{ padding-top:6.5mm; padding-bottom:6.5mm; }
+
+/* 量子化カード：Hero 見出しと同じ明るいグリーン。白字は読めないので文字はネイビー */
+.step.on.k4{ background:var(--green); border-color:var(--green); }
+.step.on.k4 .n, .step.on.k4 .t, .step.on.k4 .d{ color:var(--navy); }
+.step.on.k4 .d{ font-weight:500; }
+/* 量子化カードの文字を白に（ユーザー指定）。細字が飛ばないよう説明文は太めに */
+.step.on.k4 .n, .step.on.k4 .t, .step.on.k4 .d{ color:#fff; }
+.step.on.k4 .d{ font-weight:700; }
+/* 量子化カード：裏面 OnPrem カードと同じエメラルドに戻す（白字が読める） */
+.step.on.k4{ background:#0a9a74; border-color:#0a9a74; }
+.step.on.k4 .d{ font-weight:400; }
+
+/* 裏面リード 2 行化：Hero を 5mm 詰め、各セクションの余白へ配分 */
+.back .hero{ height:60mm; }
+.s1{ padding-top:6.5mm; padding-bottom:6.5mm; }
+.s2{ padding-top:5.5mm; padding-bottom:5.5mm; }
+.s3{ padding-top:6.5mm; }
+/* 蒸留カード：ブルーの彩度・明度を落とす */
+.step.on.k3{ background:#1e3fb8; border-color:#1e3fb8; }
+/* Knowledge カード：亮蓝と蒸留カードの中間のブルー */
+.prod.know{ --c:#2146d8; }
+/* 蒸留カードを裏面 Knowledge カードと同じブルーに統一 */
+.step.on.k3{ background:#2146d8; border-color:#2146d8; }
+</style>
+</head>
+<body>
+
+<!-- ======================= 表面 ======================= -->
+<div class="page front">
+  <div class="hero">
+    <img class="bg" src="assets/hero_front.jpg" alt="">
+    <div><span class="glogo"><img src="assets/gbase-mark-white.png" alt="">GBase<span class="ser">シリーズ</span></span></div>
+    <div><span class="pill">車内の「人」を理解する AI ／ エッジで動く AI</span></div>
+    <h1>クルマの中で、<br><em>人を理解する AI</em> を動かす。</h1>
+    <p class="lead">表情や声から、乗員の状態の変化に気づく。<br>映像も音声も車外に出さず、車載クラスの処理基盤で動かす前提で設計します。</p>
+  </div>
+
+  <div class="sec s0">
+    <h2>車内 AI ソリューション<span class="dash">──</span>気づく・話す・守る</h2>
+    <div class="cards">
+      <div class="card c1">
+        <img src="assets/art_sense.jpg" alt="">
+        <div class="in">
+          <div class="kw">気づく</div><h3>マルチモーダル理解</h3>
+          <ul class="dots">
+            <li><b>カメラとマイク</b>の情報を<br>組み合わせて推定</li>
+            <li>眠気・疲れ・ストレスなど、<br>運転に関わる状態を捉える</li>
+            <li>車内の<b>明るさや騒音の変化</b>にも<br>配慮した設計</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card c2">
+        <img src="assets/art_voice.jpg" alt="">
+        <div class="in">
+          <div class="kw">話す</div><h3>車内の音声対話</h3>
+          <ul class="dots">
+            <li>走行音の中でも聞き取る<br><b>音声認識</b></li>
+            <li>複数のマイクで<br><b>誰が話したか</b>を聞き分け</li>
+            <li>状態に合わせて、休憩や<br>手順をやさしく案内</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card c3">
+        <img src="assets/art_privacy.jpg" alt="">
+        <div class="in">
+          <div class="kw">守る</div><h3>プライバシー設計</h3>
+          <ul class="dots">
+            <li>映像・音声は<br><b>端末の中で処理</b></li>
+            <li>車外へ送るのは<br><b>判定の結果だけ</b></li>
+            <li>顔の特徴データを<br>保存しない構成にも対応</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec band">
+    <div class="top">
+      <div class="tx">
+        <h2>大きな AI を、小さな計算資源で動かす技術</h2>
+        <p class="sub">クラウドに頼れない車内・工場・機密環境のために、モデル選定から実機での最適化までを 1 チームで行います。</p>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><div class="t">モデル選定</div><div class="d">同じ条件で<br>候補を実測</div></div>
+      <div class="step"><div class="n">02</div><div class="t">追加学習</div><div class="d">自社データで<br>用途に合わせる</div></div>
+      <div class="step on k3"><div class="n">03</div><div class="t">蒸留</div><div class="d">大きいモデルの<br>力を小さく</div></div>
+      <div class="step on k4"><div class="n">04</div><div class="t">量子化</div><div class="d">INT4／INT8 で<br>軽く・速く</div></div>
+      <div class="step"><div class="n">05</div><div class="t">実機最適化</div><div class="d">GPU・NPU・<br>CPU のみでも</div></div>
+      <div class="step"><div class="n">06</div><div class="t">評価・再学習</div><div class="d">遅延・メモリ・<br>電力まで測る</div></div>
+    </div>
+    <div class="proof">
+      <div class="box">
+        <div class="tx">
+        <div class="tag">自社製品での実績</div>
+        <h3>31B 級の LLM を、自社で量子化・日本語化</h3>
+        <ul class="dots">
+          <li><b>GBase-gemma-4-31B-it</b>：オープンモデルを自社で<b>量子化・日本語化・長文対応</b>に拡張</li>
+          <li>画像・音声 AI でも、<b>軽量化からエッジ機器への実装</b>まで対応</li>
+        </ul>
+        </div>
+        <div class="art"><img src="assets/art_shrink.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="checks">
+      <div><i><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9"/></svg></i><p><b>1 万人規模</b><span>オンプレミスで全社利用</span></p></div>
+      <div><i><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9"/></svg></i><p><b>最短 1 か月</b><span>オンプレミス版の導入</span></p></div>
+      <div><i><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9"/></svg></i><p><b>ISO 27001／ISO 27017</b><span>情報セキュリティ認証</span></p></div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <b>Sparticle 株式会社</b><span class="sep"></span><span class="t">研究から実装まで、AI を「動くもの」にする会社</span>
+    <span class="next">裏面：オンプレミスで動く GBase シリーズ →</span>
+  </div>
+</div>
+
+<!-- ======================= 裏面 ======================= -->
+<div class="page back">
+  <div class="hero">
+    <img class="bg" src="assets/hero_back.jpg" alt="">
+    <div><span class="glogo"><img src="assets/gbase-mark-white.png" alt="">GBase<span class="ser">シリーズ</span></span></div>
+    <h1>データを外に出さない AI を、<br>開発・工場・販売の現場へ。</h1>
+    <p class="lead">機密の図面や試験記録も、お客様との会話も。<br>オンプレミス・閉域環境でも動く GBase シリーズで、社内の知識を AI に変えます。</p>
+  </div>
+
+  <div class="sec s1">
+    <h2>GBase シリーズ</h2>
+    <div class="prods">
+      <div class="prod onprem">
+        <div class="ph"><h3>GBase OnPrem</h3><div class="ps">社内で完結する生成 AI 基盤</div></div>
+        <ul class="dots">
+          <li>自社チューニングの<b>31B 級 LLM</b>を<br>社内サーバーで運用</li>
+          <li>出典つき<b>RAG 検索</b>と<b>権限管理</b></li>
+          <li>導入は<b>最短 1〜2 か月</b></li>
+        </ul>
+        <div class="res"><div class="v">30分 → 2分</div><div class="l">技術情報の検索時間<br>大手製造業様の事例</div></div>
+      </div>
+      <div class="prod know">
+        <div class="ph"><h3>GBase Knowledge</h3><div class="ps">会議の記録から資料づくりまで</div></div>
+        <ul class="dots">
+          <li>録るだけで<b>議事録</b>が完成<br>（10 言語の会議に対応）</li>
+          <li>社内資料と議事録を横断し<br><b>出典つきで回答</b></li>
+          <li>知識から<b>スライドを自動作成</b></li>
+        </ul>
+        <div class="res"><div class="v">30分 → 数分</div><div class="l">会議後の議事録づくり<br>導入企業の実績にもとづく目安</div></div>
+      </div>
+      <div class="prod supp">
+        <div class="ph"><h3>GBase Support</h3><div class="ps">AI コンシェルジュ・電話受付</div></div>
+        <ul class="dots">
+          <li>Web・チャット・<b>電話</b>の<br>問い合わせに AI が回答</li>
+          <li><b>10 言語以上</b>に対応</li>
+          <li>難しい相談は<b>人に引き継ぎ</b></li>
+        </ul>
+        <div class="res"><div class="v">最大 70<small> % 削減</small></div><div class="l">案内所・電話対応の件数<br>株式会社ルミネ様 NEWoMan 高輪</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec s2">
+    <div class="tx">
+      <h2>自動車業界での使い方</h2>
+      <table class="use">
+        <tr><th>現場</th><th>こんな課題に</th></tr>
+        <tr><td>開発・設計</td><td>図面・仕様書・試験記録を、社外に出さずに AI で検索したい</td></tr>
+        <tr><td>工場・品質</td><td>作業手順や過去の不具合事例を、現場ですぐに引き出したい</td></tr>
+        <tr><td>会議・プロジェクト</td><td>多国籍チームの会議を記録し、決定事項と資料づくりを速めたい</td></tr>
+        <tr><td>販売店・コールセンター</td><td>問い合わせ・電話・多言語の対応を、AI で受け止めたい</td></tr>
+      </table>
+    </div>
+    <img src="assets/art_usage.jpg" alt="">
+  </div>
+
+  <div class="sec s3">
+    <h2>研究の最前線と、車載量産の現場を知るチーム</h2>
+    <div class="team">
+      <div><b>博士・博士課程 8 名</b><span>東京大学・大阪大学・<br>慶應義塾大学ほか</span></div>
+      <div><b>トップ国際会議</b><span>CVPR・ECCV・EMNLP・<br>ACL ほかで発表</span></div>
+      <div><b>車載量産 8 年超</b><span>Tier1 での ADAS・<br>自動駐車・XiL 検証</span></div>
+      <div><b>音声・半導体・V2X</b><span>話者分離・SoC 設計・<br>車載セキュリティ</span></div>
+    </div>
+  </div>
+
+  <p class="note">※ 事例の数値は各社の公開事例にもとづく実績です。効果は環境・運用体制により異なります。記載の会社名・製品名は各社の商標または登録商標です。</p>
+
+  <div class="foot">
+    <div class="cta">
+      <img src="assets/qr.png" alt="QR">
+      <div>
+        <div class="c1">ご相談・資料請求・デモはこちら</div>
+        <div class="c2">gbase.ai/contact</div>
+        <div class="c3">車内 AI・エッジ実装・オンプレミス AI の<br>技術的なご相談も承ります</div>
+      </div>
+    </div>
+    <div class="corp">
+      <span class="logo"><img src="assets/logo_sparticle.png" alt="Sparticle"></span>
+      <p>〒103-0001 東京都中央区日本橋小伝馬町 6-12<br>日本橋森ビル 3F　TEL 03-3527-2828<br>https://www.sparticle.com/</p>
+      <div class="tags"><span>ISO/IEC 27001</span><span>ISO/IEC 27017</span></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
